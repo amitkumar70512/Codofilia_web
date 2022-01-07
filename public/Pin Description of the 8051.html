@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Pin Description of the 8051</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+ 
+ 
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="index.html"><span>Moderna</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="" href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a  href="services.html">Services</a></li>
+
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">contact </a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a class='active' href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a href="register.html">Sign in</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+
+    
+          
+
+ 
+ </div>
+ 
+    </main><!-- End #main -->
+    <h1>Pin Description of the 8051</h1>
+    <h3>• 8051 family members (e.g., 8751, 89C51, 89C52,
+    DS89C4x0)</h3>
+    <h3>– Have 40 pins dedicated for various functions such as I/O, RD,
+    WR, address, data, and interrupts.</h3>
+    <h3>– Come in different packages, such as</h3>
+    <h3>• DIP(dual in-line package),</h3>
+    <h3>• QFP(quad flat package), and
+    <h3>• LLC(leadless chip carrier)</h3>
+    <h3>• Some companies provide a 20-pin version of the 8051
+    with a reduced number of I/O ports for less demanding
+    applications</h3>
+    <h1>Pin Diagram of the 8051</h1>
+    <img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/pin%20diagram.png">
+    <h2 style="color:brown;">* XTAL1 and XTAL2</h2>
+    <h3>• The 8051 has an on-chip oscillator but requires an
+    external clock to run it</h3>
+    <h3>– A quartz crystal oscillator is connected to inputs XTAL1 (pin19)
+    and XTAL2 (pin18)</h3>
+    <h3>– The quartz crystal oscillator also needs two capacitors of 30 pF
+    value</h3>
+    <h3>If you use a frequency source other than a crystal
+    oscillator, such as a TTL oscillator:</h3>
+    <h3>– It will be connected to XTAL1</h3>
+    <h3>– XTAL2 is left unconnected</h3>
+    <h3>• The speed of 8051 refers to the maximum oscillator
+    frequency connected to XTAL.</h3>
+    <h3>• We can observe the frequency on the XTAL2 pin using
+    the oscilloscope.</h3>
+    <h2 style="color:brown;">* RST</h2>
+    <h3>• RESET pin is an input and is active high (normally low)
+    <h3>• Upon applying a high pulse to this pin, the microcontroller will
+    reset and terminate all activities</h3>
+    <h3>• This is often referred to as a power-on reset</h3>
+    <h3>• Activating a power-on reset will cause all values in the registers to
+    be lost</h3>
+    <h3>• In order for the RESET input to be effective, it must have
+    <h3>a minimum duration of 2 machine cycles.</h3>
+    <h3>• In other words, the high pulse must be high for a
+    minimum of 2 machine cycles before it is allowed to go
+    low.</h3>
+    <h2 style="color:brown;">* EA’</h2>
+    <h3>• EA’, “external access’’, is an input pin and
+    must be connected to Vcc or GND</h3>
+    <h3>• The 8051 family members all come with onchip ROM to store programs and also have
+    an external code and data memory.</h3>
+    <h3>• Normally EA pin is connected to Vcc</h3>
+    <h3>• EA pin must be connected to GND to
+    indicate that the code or data is stored
+    externally.</h3>
+    <h2 style="color:brown;">* PSEN’ and ALE</h2>
+    <h3>• PSEN, “program store enable’’, is an
+    output pin
+    <h3>• This pin is connected to the OE pin of the
+    external memory.
+    <h3>• For External Code Memory, PSEN’ = 0
+    <h3>• For External Data Memory, PSEN’ = 1
+    <h3>• ALE pin is used for demultiplexing the
+    address and data.</h3>
+    <h2 style="color:brown;">* I/O Port Pins</h2>
+    <h3>• The four 8-bit I/O ports P0, P1, P2
+    and P3 each uses 8 pins.</h3>
+    <h3>• All the ports upon RESET are
+    configured as output, ready to be
+    used as input ports by the external
+    device</h3>
+    <h2 style="color:brown;">* Pin Description Summary</h2>
+    <img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/pin%20description1.png" height="600" width="800">
+    
+    
+    <img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/pin%20description2.png" height="600" width="800">
+    <h1>GENERAL BLOCK DIAGRAM</h1>
+    <img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/general%20block%20diagram.png" height="600" width="800">
+    <img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/blockdiagram.png" height="600" width="800">
+    <p></p>
+    <br>
+    <br>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+          </div>
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About Moderna</h3>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Moderna</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Codofilia </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="index"><span>Codofilia</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="active " href="index">Home</a></li>
+          <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="ebook">Ebooks<i class="fas fa-book"></i></a></li>
+              <li><a href="program">8086 programs <i class="fa fa-code"></i></a></li>
+              <li><a href="compiler">Online compiler <i class="fas fa-code-branch"></i></a></li>
+              
+              <li class="dropdown"><a href="#"><span>Installations</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="install1">Ubuntu <i class="fab fa-ubuntu"></i></a></li>
+                  <li><a href="install2">Masm assembler<i class="fas fa-code"></i></a></li>
+                  <li><a href="https://www.java.com/download/ie_manual.jsp">Java<i class="fab fa-java"></i></a></li>
+                  <li><a href="#"></a></li>
+                  
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="about">About</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="team">Team</a></li>
+          <li><a href="contact">Contact</a></li>
+          <li><a href="register" id="signin">Sign in</a></li>
+
+          <li class="dropdown" id="profile"><a href="#"><span>Profile</span> <i class="far fa-user"></i></a>
+            <ul>
+              <img src="assets/img/user.jpg"  width="40" height="40" style="margin-left: 40px; margin-top: 20px; align-items: center;"> </br>
+              <li style="align-items: center;"><a href="#"><i class="fas fa-user-edit">  edit profile </i></a></li>
+              <br>
+              <li><a href="#">user details</a></li>
+              <li><a href="#">reset password</a></li> <br>
+              <li onclick="logout()"><a style="font-size: 20px;"><i class="fas fa-power-off"  >   Log out </i></a></li>
+              
+            </ul>
+          </li>
+
+
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header>
+
+
+  <main id="main">
+
+    <!-- ======= Contact Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Program    <i class='fas fa-laptop-code'></i></h2>
+          <ol>
+            <li><a href="index">Home</a></li>
+            <li>Program</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+<!-- ======= Features Section ======= -->
+<section class="features">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Assembly programming 8086 Examples <i class="fas fa-code-branch"></i></h2>
+      
+    </div>
+
+    <div class="row" data-aos="fade-up">
+      <div class="col-md-5">
+        <img src="assets/img/programs_image1.jpg" class="img-fluid" alt="">
+      </div>
+      <div class="col-md-7 pt-4">
+        
+        <p class="fst-italic">
+          Assembly language is a low-level programming language for a computer or other programmable device specific to a particular computer architecture in contrast to most high-level programming languages, which are generally portable across multiple systems. Assembly language is converted into executable machine code by a utility program referred to as an assembler like NASM, MASM, etc.
+        </p>
+        <ul>
+          <li><i class="bi bi-check"></i>It requires less memory and execution time.</li>
+          <li><i class="bi bi-check"></i>It allows hardware-specific complex jobs in an easier way.</li>
+        </ul>
+      </div>
+    </div>
+
+     <div class="row" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2">
+            <img src="assets/img/programs_image2.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <h3> Input-Output Instructions</h3>
+            <p class="fst-italic">
+              I/O instructions are used to input data from peripherals, output data to peripherals, or read/write i/0 controls.
+            </p>
+           
+            <ul>
+              <li><i class="bi bi-check"></i><a href="program1">Add two Numbers</a></li>
+              <li><i class="bi bi-check"></i><a href="program2">Display a character</a> </li>
+              <li><i class="bi bi-check"></i><a href="program3">Read a character and display it on new line</a> </li>
+              <li><i class="bi bi-check"></i><a href="program4">Program to Display a String</a> </li>
+              <li><i class="bi bi-check"></i><a href="program5">Read digit, display difference with variable</a></li>
+              <li><i class="bi bi-check"></i><a href="program6">Read digit, display difference without variable</a></li>
+              <li><i class="bi bi-check"></i><a href="program7">Read digit, compute sum and display using variable</a></li>
+              <li><i class="bi bi-check"></i><a href="program8">Convert lower case letter into Upper case</a> 
+              </li>
+           
+            </ul>
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2">
+            <img src="assets/img/programs_image3.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <h3> Flow Control Instructions</h3>
+            <p class="fst-italic">
+              Flow control instructions are used to divert the flow of the program.These instructions are used to implement loops and subroutine calls.
+            </p>
+           
+            <ul>
+              <li><i class="bi bi-check"></i><a href="program9">Print ASCII characters</a></li>
+              <li><i class="bi bi-check"></i><a href="program10">Print counting from 0 to 9 </a></li>
+              <li><i class="bi bi-check"></i><a href="program11">Print upper case letter from A to Z</a></li>
+              <li><i class="bi bi-check"></i> <a href="program12">Print lower case letters from a to z in reverse order</a> </li>
+
+            </ul>
+          </div>
+
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <h3> General programs</h3>
+       
+           
+            <ul>
+              <li><a href="program13">Get and display the current system time</a>  <i class="bi bi-check"></i></li>
+              
+              
+            </ul>
+          </div>
+        </div>
+
+    
+    
+
+ 
+
+  </div>
+</section><!-- End Features Section -->               
+            
+       
+        
+
+</div>
+
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<%- include('../partials/footer') %>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/purecounter/purecounter.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+<script src="https://kit.fontawesome.com/76b626d43d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>     

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+   assemblylogin..
+</title>
+<script src="https://kit.fontawesome.com/76b626d43d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="style1.css" type="text/css">
+        <link rel="icon" href="asmlogo.jpg" type="text/icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" /> 
+    </head>
+    <body>
+        <nav>
+            
+                <div class="top">
+                   <a href=""><i class ="fas fa-code"></i></a> 
+                    <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/firstpage.html"><i class="fas fa-home">Home </i>  </a>
+                    <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/ebook1.html"><i class="fas fa-book-open">e-books</i></a>
+                    
+               
+                 <a href ="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/programs.html">8086 examples</a>
+            
+           <!---- <div id="reg"> <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/registration.html">Register</a>
+             </div> -->
+           
+             <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/registration.html">Sign in  <i class="fas fa-sign-in-alt"></i> </a></div>
+               
+            
+        </nav>
+        <div class="dropdown">
+               
+          <button class="dropbutton"><i class="fas fa-microchip"></i>8086  <i class="fas fa-caret-down"></i></button>
+          <div class="content">
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/pin8086.html"> Artitecture and Pin diagram</a>
+          
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material2.html">Registers</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material3.html">Memory accessing</a>
+          
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material5.html">variables</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material6.html">Arrays</a>
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material8.html">Interrupts</a>
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material12.html">Procedures</a>
+
+        </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbutton"><i class="fas fa-microchip"></i>8051  <i class="fas fa-caret-down" ></i></button>
+          <div class="content">
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material1.html">Introduction to 8051</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material2.html">Artitecture</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material3.html">Pin description</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material4.html">8051 Stack</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material5.html">Bit Addressable</a>
+          
+        </div>
+        </div>
+                   
+                    <div class="dropdown">
+                      <button class="dropbutton"><i class="fas fa-project-diagram"></i>Compilers <i class="fas fa-caret-down"></i></button>
+                      <div class="content">
+                      <a href="https://www.onlinegdb.com">Online GDB Compiler </a>
+                      <a href="https://www.tutorialspoint.com/compile_assembly_online.php">MASM compiler</a>
+                      <a href="https://www.tutorialspoint.com/compile_c_online.php"><i class="fas fa-code" style="width:25px;height:25px;"></i>C Compiler</a>
+                      <a href="https://www.tutorialspoint.com/compile_java_online.php"><i class ="fab fa-java" style="width:25px;height:25px;"></i>JAVA Compiler</a>
+                      
+                    </div>
+                    </div>
+               
+            
+       
+            <div class="material">
+	        <h1>Pin Description of the 8051</h1>
+<h3>• 8051 family members (e.g., 8751, 89C51, 89C52,
+DS89C4x0)</h3>
+<h3>– Have 40 pins dedicated for various functions such as I/O, RD,
+WR, address, data, and interrupts.</h3>
+<h3>– Come in different packages, such as</h3>
+<h3>• DIP(dual in-line package),</h3>
+<h3>• QFP(quad flat package), and
+<h3>• LLC(leadless chip carrier)</h3>
+<h3>• Some companies provide a 20-pin version of the 8051
+with a reduced number of I/O ports for less demanding
+applications</h3>
+<h1>Pin Diagram of the 8051</h1>
+<img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/pin%20diagram.png">
+<h2 style="color:brown;">* XTAL1 and XTAL2</h2>
+<h3>• The 8051 has an on-chip oscillator but requires an
+external clock to run it</h3>
+<h3>– A quartz crystal oscillator is connected to inputs XTAL1 (pin19)
+and XTAL2 (pin18)</h3>
+<h3>– The quartz crystal oscillator also needs two capacitors of 30 pF
+value</h3>
+<h3>If you use a frequency source other than a crystal
+oscillator, such as a TTL oscillator:</h3>
+<h3>– It will be connected to XTAL1</h3>
+<h3>– XTAL2 is left unconnected</h3>
+<h3>• The speed of 8051 refers to the maximum oscillator
+frequency connected to XTAL.</h3>
+<h3>• We can observe the frequency on the XTAL2 pin using
+the oscilloscope.</h3>
+<h2 style="color:brown;">* RST</h2>
+<h3>• RESET pin is an input and is active high (normally low)
+<h3>• Upon applying a high pulse to this pin, the microcontroller will
+reset and terminate all activities</h3>
+<h3>• This is often referred to as a power-on reset</h3>
+<h3>• Activating a power-on reset will cause all values in the registers to
+be lost</h3>
+<h3>• In order for the RESET input to be effective, it must have
+<h3>a minimum duration of 2 machine cycles.</h3>
+<h3>• In other words, the high pulse must be high for a
+minimum of 2 machine cycles before it is allowed to go
+low.</h3>
+<h2 style="color:brown;">* EA’</h2>
+<h3>• EA’, “external access’’, is an input pin and
+must be connected to Vcc or GND</h3>
+<h3>• The 8051 family members all come with onchip ROM to store programs and also have
+an external code and data memory.</h3>
+<h3>• Normally EA pin is connected to Vcc</h3>
+<h3>• EA pin must be connected to GND to
+indicate that the code or data is stored
+externally.</h3>
+<h2 style="color:brown;">* PSEN’ and ALE</h2>
+<h3>• PSEN, “program store enable’’, is an
+output pin
+<h3>• This pin is connected to the OE pin of the
+external memory.
+<h3>• For External Code Memory, PSEN’ = 0
+<h3>• For External Data Memory, PSEN’ = 1
+<h3>• ALE pin is used for demultiplexing the
+address and data.</h3>
+<h2 style="color:brown;">* I/O Port Pins</h2>
+<h3>• The four 8-bit I/O ports P0, P1, P2
+and P3 each uses 8 pins.</h3>
+<h3>• All the ports upon RESET are
+configured as output, ready to be
+used as input ports by the external
+device</h3>
+<h2 style="color:brown;">* Pin Description Summary</h2>
+<img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/pin%20description1.png" height="600" width="800">
+
+
+<img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/pin%20description2.png" height="600" width="800">
+<h1>GENERAL BLOCK DIAGRAM</h1>
+<img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/general%20block%20diagram.png" height="600" width="800">
+<img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/blockdiagram.png" height="600" width="800">
+<p></p>
+<br>
+<br>
+		   <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material2.html">back<i class="fas fa-arrow-circle-left" style="width:25px; height:30px;"></i> </a>
+            <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material4.html">next<i class="fas fa-arrow-circle-right	" style="width:25px; height:30px;"></i> </a>
+            </div>
+
+     
+     <div class="lowpanel">
+      <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/about.html">About</a>
+      <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/contact.html"><i class="fas fa-map-marker-alt"></i>contact us</a>
+         <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/feedback.html"><i class="fas fa-comment-dots"></i>feedback</a>
+        
+         
+         <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/install0.html"><i class="fas fa-hands-helping"></i>Installations help</a>
+        
+     </div>
+     
+     <div class="socialmedia" >
+      <a href="https://www.facebook.com/amit70512/"  ><i class="fab fa-facebook" style="font-size:48px;"> </i></a>
+      <a href="https://www.instagram.com/assemblylearning/"><i class="fab fa-instagram"style="font-size:48px;"></i></a>
+      <a href=""><i class="fab fa-twitter" style="font-size:48px;"></i></a>
+      
+    </div>
+    </body>
+</html>

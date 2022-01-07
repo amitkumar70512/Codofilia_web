@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ARCHITECTURE OF 8051 MICROCONTROLLER</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+ 
+ 
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="index.html"><span>Moderna</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="" href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a  href="services.html">Services</a></li>
+
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">contact </a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a class='active' href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a href="register.html">Sign in</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+
+    
+          
+
+ 
+ </div>
+ 
+    </main><!-- End #main -->
+    <h1>ARCHITECTURE OF 8051 MICROCONTROLLER:</h1>
+			<h3>It is 8-bit microcontroller, means MC 8051 can Read, Write and Process 8 bit data. This is
+mostly used microcontroller in the robotics, home appliances like mp3 player, washing
+machines, electronic iron and industries. Mostly used blocks in the architecture of 8051 are as
+follows:</h3>
+<img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/8051%20arch.png">
+<h3><b>1. Oscillator and clock generator:</b></h3>
+<h3>All operations in a microcontroller are synchronized by the help of an oscillator clock.
+The oscillator clock generates the clock pulses by which all internal operations are synchronized.</h3>
+<h3>A resonant network connected through pins XTAL1 and XTAL2 forms up an oscillator. For this
+purpose a quartz crystal and capacitors are employed. The crystal run at specified maximum
+and minimum frequencies typically at 1 MHz to 16 MHz.</h3>
+<h3><b>2. ALU:</b></h3>
+<h3>It is 8 bit unit. It performs arithmetic operation as addition, subtraction, multiplication,
+division, increment and decrement. It performs logical operations like AND, OR and EX-OR. It
+manipulates 8 bit and 16 bit data. It calculates address of jump locations in relative branch
+instruction.</h3> <h3>It performs compare, rotate and compliment operations. It consists of Boolean
+processor which performs bit, set, test, clear and compliment. 8051 micro controller contains 34
+general purpose registers or working registers.2 of them are called math registers A & B and 32
+are bank of registers.</h3>
+<h3><b>a. Accumulator(A-reg):</b></h3>
+<h3>It is 8 bit register. Its address is E0H and it is bit and byte accessible. Result of arithmetic
+& logic operations performed by ALU is accumulated by this register. Therefore it is called
+accumulator register.</h3> <h3>It is used to store 8 bit data and to hold one of operand of ALU units
+during arithmetical and logical operations. Most of the instructions are carried out on
+accumulator data. It is most0 versatile of 2 CPU registers.</h3>
+<h3><b>b. B-register:</b></h3>
+<h3>It is special 8 bit math register. It is bit and byte accessible. It is used in conjunction with
+A register as I/P operand for ALU. It is used as general purpose register to store 8 bit data.</h3>
+<h3><b>c. PSW:</b></h3>
+<h3>It is 8 bit register. Its address is D0H and It is bit and byte accessible. It has 4 conditional
+flags or math flags which sets or resets according to condition of result.</h3> <h3>It has 3 control flags, by
+setting or resetting bit required operation or function can be achieved. The format of flag
+register is as shown below:</h3>
+<h3><b>d. FLAG:</b></h3>
+<h3><b>1. Carry Flag(CY):</b> During addition and subtraction any carry or borrow is generated then
+carry flag is set otherwise carry flag resets. It is used in arithmetic, logical, jump, rotate
+and Boolean operations.</h3>
+<h3><b>2. Auxiliary carry flag(AC):</b> If during addition and subtraction any carry or borrow is
+generated from lower 4 bit to higher 4 bit then AC sets else it resets. It is used in BCD
+arithmetic operations.</h3>
+<h3><b>3. Overflow flag(OV):</b> If in signed arithmetic operations result exceeds more than 7 bit
+than OV flag sets else resets.It is used in signed arithmetic operations only.</h3>
+<h3><b>4. Parity flag(P):</b> If in result, even no. Of ones "1" are present than it is called even parity
+and parity flag sets. In result odd no. Of ones "1"are present than it is called odd parity
+and parity flag resets.</h3>
+<h3><b>ii. CONTROL FLAGS:</b></h3>
+<h3><b>1. FO:</b> It is user defined flag. The user defines the function of this flag. The user can set
+,test n clear this flag through software.</h3>
+<h3><b>2. RS1 and RS0:</b> These flags are used to select bank of register by resetting those flags
+which are as shown in table :</h3>
+<h3><b>3. Program counter (PC):</b> The Program Counter (PC) is a 2-byte address which tells the
+8051 where the next instruction to execute is found in memory. It is used to hold 16 bit
+address of internal RAM, external RAM or external ROM locations.</h3> <h3>When the 8051 is
+initialized PC always starts at 0000h and is incremented each time an instruction is
+executed. It is important to note that PC isnt always incremented by one and never
+decremented.</h3>
+<h3><b>4. Data pointer register (DTPR):</b> It is a 16 bit register used to hold address of external or
+internal RAM where data is stored or result is to be stored. It is used to store 16 bit data.
+It is divided into2- 8bit registers, DPH-data pointer higher order (83H) and DPL-data
+pointer lower order (82H).</h3> <h3>Each register can be used as general purpose register to store
+8 bit data and can also be used as memory location. DPTR does not have single internal
+address. It functions as Base register in base relative addressing mode and in-direct
+jump.</h3>
+<h3><b>5. Stack pointer (SP):</b> It is 8-bit register. It is byte addressable. Its address is 81H. It is
+used to hold the internal RAM memory location addresses which are used as stack
+memory. </h3> <h3>When the data is to be placed on stack by push instruction, the content of
+stack pointer is incremented by 1, and when data is retrieved from stack, content of
+stack of stack pointer is decremented by 1.</h3>
+<h3>iii. Special function Registers(SFR): The 8051 microcontroller has 11 SFR divided in 4 groups:
+A. <b>Timer/Counter register:</b> 8051 microcontroller has 2-16 bit Timer/counter registers called
+Timer-reg-T0 And Timer/counter Reg-T1.Each register is 16 bit register divide into lower and
+higher byte register as shown below:</h3> <h3>These register are used to hold initial no. of count. All of
+the 4 register are byte addressable.</h3>
+<h3><b>1. Timer control register:</b> 8051 microcontroller has two 8-bit timer control register i.e.
+TMOD and TCON register. TMOD Register: it is 8-bit register. Its address is 89H. It is byte
+addressable. It used to select mode and control operation of time by writing control
+word.</h3>
+<h3><b>2. TCON register:</b> It is 8-bit register. Its address is 88H. It is byte addressable. Its MSB 4-
+bit are used to control operation of timer/ counter and LSB 4-bit are used for external
+interrupt control.</h3>
+<h3>B. Serial data register: 8051 micro controller has 2 serial data register viz. SBUF and SCON.</h3>
+<h3><b>1. Serial buffer register (SBUF):</b> it is 8-bit register. It is byte addressable .Its address is
+99H. It is used to hold data which is to be transferred serially.</h3>
+<h3><b>2. Serial control register (SCON):</b> it is 8-bit register. It is bit/byte addressable. Its address
+is 98H. The 8-bit loaded into this register controls the operation of serial communication.
+<h3>C. Interrupt register: 8051 µC has 2 8-bit interrupt register.</h3>
+<h3><b>1. Interrupt enable register (IE):</b> it is 8-bit register. It is bit/byte addressable. Its address
+is A8H.it is used to enable and disable function of interrupt.</h3>
+<h3><b>2. Interrupt priority register (IP):</b> It is 8-bit register. It is bit/byte addressable. Its address
+is B8H. it is used to select low or high level priority of each individual interrupts.
+<h3><b>D. Power control register (PCON):</b> it is 8-bit register. It is byte addressable .Its address is 87H. Its
+bits are used to control mode of power saving circuit, either idle or power down mode and also
+one bit is used to modify baud rate of serial communication.</h3>
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+          </div>
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About Moderna</h3>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Moderna</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

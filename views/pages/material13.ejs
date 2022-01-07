@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+   Assemblylogin..Stack <i class="fas fa-layer-group"></i>
+</title>
+<script src="https://kit.fontawesome.com/76b626d43d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="style1.css" type="text/css">
+        <link rel="icon" href="asmlogo.jpg" type="text/icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" /> 
+    </head>
+    <body>
+        <nav>
+            
+                <div class="top">
+                   <a href=""><i class ="fas fa-code"></i></a> 
+                    <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/firstpage.html"><i class="fas fa-home">Home </i>  </a>
+                    <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/ebook1.html"><i class="fas fa-book-open">e-books</i></a>
+                    
+                 <a href="">Library</a>
+                 <a href ="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/programs.html">8086 examples</a>
+            
+           <!---- <div id="reg"> <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/registration.html">Register</a>
+             </div> -->
+             <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/registration.html">Sign in  <i class="fas fa-sign-in-alt"></i> </a></div>
+               
+            
+        </nav>
+        
+        <div class="dropdown">
+               
+          <button class="dropbutton"><i class="fas fa-microchip"></i>8086  <i class="fas fa-caret-down"></i></button>
+          <div class="content">
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/pin8086.html"> Artitecture and Pin diagram</a>
+          
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material2.html">Registers</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material3.html">Memory accessing</a>
+          
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material5.html">variables</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material6.html">Arrays</a>
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material8.html">Interrupts</a>
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material12.html">Procedures</a>
+
+        </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbutton"><i class="fas fa-microchip"></i>8051  <i class="fas fa-caret-down" ></i></button>
+          <div class="content">
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material1.html">Introduction to 8051</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material2.html">Artitecture</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material3.html">Pin description</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material4.html">8051 Stack</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material5.html">Bit Addressable</a>
+          
+        </div>
+        </div>
+        
+                    <div class="dropdown">
+                      <button class="dropbutton"><i class="fas fa-project-diagram"></i>Compilers <i class="fas fa-caret-down"></i></button>
+                      <div class="content">
+                      <a href="https://www.onlinegdb.com">Online GDB Compiler </a>
+                      <a href="https://www.tutorialspoint.com/compile_assembly_online.php">MASM compiler</a>
+                      <a href="https://www.tutorialspoint.com/compile_c_online.php"><i class="fas fa-code" style="width:25px;height:25px;"></i>C Compiler</a>
+                      <a href="https://www.tutorialspoint.com/compile_java_online.php"><i class ="fab fa-java" style="width:25px;height:25px;"></i>JAVA Compiler</a>
+                      
+                    </div>
+                    </div>
+               
+            
+       
+            <div class="material">
+			<h1>Stack <i class="fas fa-layer-group"></i></h1>
+			<h3>Stack <i class="fas fa-layer-group"></i> is an area of memory for keeping temporary data. Stack  is used by
+<b>CALL</b> instruction to keep return address for procedure, <b>RET</b> instruction gets
+this value from the Stack  and returns to that offset. Quite the same thing
+happens when <b>INT</b> instruction calls an interrupt, it stores in Stack  flag register,
+code segment and offset. <b>IRET</b> instruction is used to return from interrupt call.</h3>
+<h3>We can also use the Stack  to keep any other data,</h3>
+<h3>there are two instructions that work with the Stack :</h3>
+<h3><b>PUSH</b> - stores 16 bit value in the Stack .</h3>
+<h3><b>POP</b> - gets 16 bit value from the Stack .</h3>
+<p style="border:6px; border-style:solid; border-color:#808080; padding: 1em;">
+<br>Syntax for PUSH instruction:
+<br>PUSH REG
+<br>PUSH SREG
+<br>PUSH memory
+<br>PUSH immediate
+<br>REG: AX, BX, CX, DX, DI, SI, BP, SP.
+<br>SREG: DS, ES, SS, CS.
+<br>memory: [BX], [BX+SI+7], 16 bit variable, etc...
+<br>immediate: 5, -24, 3Fh, 10001101b, etc...</p>
+<p style="border:6px; border-style:solid; border-color:#808080; padding: 1em;">
+<br>Syntax for POP instruction:
+<br>POP REG
+<br>POP SREG
+<br>POP memory
+<br>REG: AX, BX, CX, DX, DI, SI, BP, SP.
+<br>SREG: DS, ES, SS, (except CS).
+<br>memory: [BX], [BX+SI+7], 16 bit variable, etc...</p>
+<h2>Notes:</h2>
+<h3> PUSH and POP work with 16 bit values only!</h3>
+<h3> Note: PUSH immediate works only on 80186 CPU and later!</h3>
+<h3>The Stack  uses LIFO (Last In First Out) algorithm,
+this means that if we push these values one by one into the Stack :
+1, 2, 3, 4, 5</h3>
+<h3>the first value that we will get on pop will be 5, then 4, 3, 2, and only then 1.</h3>
+<img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/Stack.png">
+<h3>It is very important to do equal number of PUSHs and POPs, otherwise the
+Stack <i class="fas fa-layer-group"></i> maybe corrupted and it will be impossible to return to operating system.
+As you already know we use RET instruction to return to operating system, so
+when program starts there is a return address in Stack  (generally it's 0000h).
+PUSH and POP instruction are especially useful because we don't have too
+much registers to operate with, so here is a trick:</h3>
+<h3> Store original value of the register in Stack  (using PUSH).</h3>
+<h3> Use the register for any purpose.</h3>
+<h3> Restore the original value of the register from Stack  (using POP).</h3>
+<h3>Here is an example: </h3>
+<p style="border:6px; border-style:solid; border-color:#808080; padding: 1em;">
+<br>ORG 100h
+<br>MOV AX, 1234h
+<br>PUSH AX ; store value of AX in Stack .
+<br>MOV AX, 5678h ; modify the AX value.
+<br>POP AX ; restore the original value of AX.
+<br>RET
+<br>END</p>
+<h3>Another use of the Stack  is for exchanging the values,
+here is an example:</h3>
+<p style="border:6px; border-style:solid; border-color:#808080; padding: 1em;">
+<br>ORG 100h
+<br>MOV AX, 1212h ; store 1212h in AX.
+<br>MOV BX, 3434h ; store 3434h in BX
+<br>PUSH AX ; store value of AX in Stack .
+<br>PUSH BX ; store value of BX in Stack .
+<br>POP AX ; set AX to original value of BX.
+<br>POP BX ; set BX to original value of AX.
+<br>RET
+<br>END</p>
+<h3>The exchange happens because Stack  uses <b>LIFO</b> (Last In First Out) algorithm,
+so when we push <b>1212h</b> and then <b>3434h</b>, on pop we will first get 3434h and
+only after it <b>1212h</b>.</h3>
+<h3>The Stack  memory area is set by <b>SS</b> (Stack <i class="fas fa-layer-group"></i> Segment) register, and <b>SP</b> (Stack <i class="fas fa-layer-group"></i>
+Pointer) register. Generally operating system sets values of these registers on
+program start.</h3>
+<h3><b>"PUSH source"</b> instruction does the following:</h3>
+<h3> Subtract 2 from SP register.</h3>
+<h3> Write the value of source to the address SS:SP.</h3>
+<h3><b>"POP destination"</b> instruction does the following:</h3>
+<h3> Write the value at the address SS:SP to destination.</h3>
+<h3> Add <b>2</b> to <b>SP</b> register.</h3>
+<h3>The current address pointed by <b>SS:SP</b> is called the <b>top of the Stack </b>.
+For <b>COM</b> files Stack  segment is generally the code segment, and Stack  pointer
+is set to value of <b>0FFFEh</b>. At the address <b>SS:0FFFEh</b> stored a return address
+for <b>RET</b> instruction that is executed in the end of the program.</h3>
+<h3>You can visually see the Stack  operation by clicking on <b>[Stack <i class="fas fa-layer-group"></i>]</b> button on
+emulator window. The top of the Stack  is marked with "<" sign.</h3>
+
+
+
+		   <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material12.html">back<i class="fas fa-arrow-circle-left" style="width:25px; height:30px;"></i> </a>
+            <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material14.html">next<i class="fas fa-arrow-circle-right	" style="width:25px; height:30px;"></i> </a>
+            </div>
+
+     
+     <div class="lowpanel">
+      <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/about.html">About</a>
+      <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/contact.html"><i class="fas fa-map-marker-alt"></i>contact us</a>
+         <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/feedback.html"><i class="fas fa-comment-dots"></i>feedback</a>
+        
+         
+         <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/install0.html"><i class="fas fa-hands-helping"></i>Installations help</a>
+        
+     </div>
+     
+     <div class="socialmedia" >
+      <a href="https://www.facebook.com/amit70512/"  ><i class="fab fa-facebook" style="font-size:48px;"> </i></a>
+      <a href="https://www.instagram.com/assemblylearning/"><i class="fab fa-instagram"style="font-size:48px;"></i></a>
+      <a href=""><i class="fab fa-twitter" style="font-size:48px;"></i></a>
+      
+    </div>
+    </body>
+</html>

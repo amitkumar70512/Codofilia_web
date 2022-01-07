@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+   assemblylogin..
+</title>
+<script src="https://kit.fontawesome.com/76b626d43d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="style1.css" type="text/css">
+        <link rel="icon" href="asmlogo.jpg" type="text/icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" /> 
+    </head>
+    <body>
+        <nav>
+            
+                <div class="top">
+                   <a href=""><i class ="fas fa-code"></i></a> 
+                    <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/firstpage.html"><i class="fas fa-home">Home </i>  </a>
+                    <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/ebook1.html"><i class="fas fa-book-open">e-books</i></a>
+                    
+                 
+                 <a href ="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/programs.html">8086 examples</a>
+            
+           <!---- <div id="reg"> <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/registration.html">Register</a>
+             </div> -->
+          
+             <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/registration.html">Sign in  <i class="fas fa-sign-in-alt"></i> </a></div>
+                
+            
+        </nav>
+        
+        <div class="dropdown">
+               
+          <button class="dropbutton"><i class="fas fa-microchip"></i>8086  <i class="fas fa-caret-down"></i></button>
+          <div class="content">
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/pin8086.html"> Artitecture and Pin diagram</a>
+          
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material2.html">Registers</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material3.html">Memory accessing</a>
+          
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material5.html">variables</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material6.html">Arrays</a>
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material8.html">Interrupts</a>
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material12.html">Procedures</a>
+
+        </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbutton"><i class="fas fa-microchip"></i>8051  <i class="fas fa-caret-down" ></i></button>
+          <div class="content">
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material1.html">Introduction to 8051</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material2.html">Artitecture</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material3.html">Pin description</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material4.html">8051 Stack</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material5.html">Bit Addressable</a>
+          
+        </div>
+        </div>
+        
+                    <div class="dropdown">
+                      <button class="dropbutton"><i class="fas fa-project-diagram"></i>Compilers <i class="fas fa-caret-down"></i></button>
+                      <div class="content">
+                      <a href="https://www.onlinegdb.com">Online GDB Compiler </a>
+                      <a href="https://www.tutorialspoint.com/compile_assembly_online.php">MASM compiler</a>
+                      <a href="https://www.tutorialspoint.com/compile_c_online.php"><i class="fas fa-code" style="width:25px;height:25px;"></i>C Compiler</a>
+                      <a href="https://www.tutorialspoint.com/compile_java_online.php"><i class ="fab fa-java" style="width:25px;height:25px;"></i>JAVA Compiler</a>
+                     
+                    </div>
+                    </div>
+               
+            
+       
+            <div class="material">
+               <h1>Memory Access</h1>
+                <h3>to access memory we can use these four registers: BX, SI, DI, BP. combining
+these registers inside [ ] symbols, we can get different memory locations.
+these combinations are supported (addressing modes): </h3>	
+<img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/memory%20access.png" height="350" width="500">
+<h3><b>d8</b> - stays for 8 bit signed immediate displacement (for example: 22, 55h, -1,
+etc...)</h3>
+<h3><b>d16</b> - stays for 16 bit signed immediate displacement (for example: 300,
+5517h, -259, etc...).</h3>
+<h3>displacement can be a immediate value or offset of a variable, or even both. if
+there are several values, assembler evaluates all values and calculates a single
+immediate value..</h3>
+<h3>displacement can be inside or outside of the [ ] symbols, assembler generates
+the same machine code for both ways.</h3>
+<h3>displacement is a <b>signed</b> value, so it can be both positive or negative.
+generally the compiler takes care about difference between <b>d8</b> and <b>d16</b>, and
+generates the required machine code.</h3>
+<h3>for example, let's assume that <b>DS = 100, BX = 30, SI = 70.</b></h3>
+<h3>The following addressing mode: <b>[BX + SI] + 25</b>
+is calculated by processor to this physical address: <b>100 * 16 + 30 + 70 + 25
+= 1725.</b></h3>
+<h3>by default DS segment register is used for all modes except those with BP
+register, for these SS segment register is used.
+there is an easy way to remember all those possible combinations using this
+chart: </h3>		
+<img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/chart.png" height="90" width="150">
+<h3>you can form all valid combinations by taking only one item from each column
+or skipping the column by not taking anything from it. as you see BX and BP
+never go together. SI and DI also don't go together. here are an examples of
+a valid addressing modes: <b>[BX+5] , [BX+SI] , [DI+BX-4]</b></h3>
+<h3>the value in segment register (CS, DS, SS, ES) is called a segment,
+and the value in purpose register (BX, SI, DI, BP) is called an offset.
+When DS contains value 1234h and SI contains the value 7890h it can be
+also recorded as <b>1234:7890</b>. The physical address will be <b>1234h * 10h +
+7890h = 19BD0h.</b></h3>
+<h3>if zero is added to a decimal number it is multiplied by 10, however 10h = 16,
+so if zero is added to a hexadecimal value, it is multiplied by 16, for example:</h3>
+<h3><b>7h = 7</b></h3>
+<h3><b>70h = 112</b></h3>
+<h3>in order to say the compiler about data type,</h3>
+<h3>these prefixes should be used:</h3>
+<h3><b>byte ptr</b> - for byte.</h3>
+<h3><b>word ptr</b> - for word (two bytes).</h3>
+<h3>for example:</h3>
+<h3>byte ptr [BX] ; byte access.>/h3>
+ <h3>or</h3>
+<h3>word ptr [BX] ; word access.</h3>
+<h3>assembler supports shorter prefixes as well:</h3>
+<h3><b>b.</b> - for <b>byte ptr</b></h3>
+<h3><b>w.</b> - for <b>word ptr</b></h3>
+<h3>in certain cases the assembler can calculate the data type automatically.</h3>    
+
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material2.html">back<i class="fas fa-arrow-circle-left" style="width:20px; height:25px;"></i> </a>
+            <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material4.html">next<i class="fas fa-arrow-circle-right" style="width:20px; height:25px;"></i> </a>
+            
+            </div>
+
+     
+     <div class="lowpanel">
+      <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/about.html">About</a>
+      <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/contact.html"><i class="fas fa-map-marker-alt"></i>contact us</a>
+         <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/feedback.html"><i class="fas fa-comment-dots"></i>feedback</a>
+        
+         
+         <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/install0.html"><i class="fas fa-hands-helping"></i>Installations help</a>
+        
+     </div>
+     
+     <div class="socialmedia" >
+      <a href="https://www.facebook.com/amit70512/"  ><i class="fab fa-facebook" style="font-size:48px;"> </i></a>
+      <a href="https://www.instagram.com/assemblylearning/"><i class="fab fa-instagram"style="font-size:48px;"></i></a>
+      <a href=""><i class="fab fa-twitter" style="font-size:48px;"></i></a>
+      
+    </div>
+    </body>
+</html>

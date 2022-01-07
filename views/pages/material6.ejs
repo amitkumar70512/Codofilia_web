@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+   assemblylogin..
+</title>
+<script src="https://kit.fontawesome.com/76b626d43d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="style1.css" type="text/css">
+        <link rel="icon" href="asmlogo.jpg" type="text/icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" /> 
+    </head>
+    <body>
+        <nav>
+            
+                <div class="top">
+                   <a href=""><i class ="fas fa-code"></i></a> 
+                    <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/firstpage.html"><i class="fas fa-home">Home </i>  </a>
+                    <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/ebook1.html"><i class="fas fa-book-open">e-books</i></a>
+                    
+                
+                 <a href ="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/programs.html">8086 examples</a>
+            
+           <!---- <div id="reg"> <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/registration.html">Register</a>
+             </div> -->
+             
+             <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/registration.html">Sign in  <i class="fas fa-sign-in-alt"></i> </a></div>
+                
+        </nav>
+        
+        <div class="dropdown">
+               
+          <button class="dropbutton"><i class="fas fa-microchip"></i>8086  <i class="fas fa-caret-down"></i></button>
+          <div class="content">
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/pin8086.html"> Artitecture and Pin diagram</a>
+          
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material2.html">Registers</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material3.html">Memory accessing</a>
+          
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material5.html">variables</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material6.html">Arrays</a>
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material8.html">Interrupts</a>
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material12.html">Procedures</a>
+
+        </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbutton"><i class="fas fa-microchip"></i>8051  <i class="fas fa-caret-down" ></i></button>
+          <div class="content">
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material1.html">Introduction to 8051</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material2.html">Artitecture</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material3.html">Pin description</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material4.html">8051 Stack</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material5.html">Bit Addressable</a>
+          
+        </div>
+        </div>
+        
+                    <div class="dropdown">
+                      <button class="dropbutton"><i class="fas fa-project-diagram"></i>Compilers <i class="fas fa-caret-down"></i></button>
+                      <div class="content">
+                      <a href="https://www.onlinegdb.com">Online GDB Compiler </a>
+                      <a href="https://www.tutorialspoint.com/compile_assembly_online.php">MASM compiler</a>
+                      <a href="https://www.tutorialspoint.com/compile_c_online.php"><i class="fas fa-code" style="width:25px;height:25px;"></i>C Compiler</a>
+                      <a href="https://www.tutorialspoint.com/compile_java_online.php"><i class ="fab fa-java" style="width:25px;height:25px;"></i>JAVA Compiler</a>
+                      
+                    </div>
+                    </div>
+               
+            
+       
+            <div class="material">
+			<h1>ARRAYS</h1>
+			<h3>Arrays can be seen as chains of variables. A text string is an example of a byte
+			array, each character is presented as an ASCII code value (0..255).</h3>
+<h3>Here are some array definition examples:</h3>
+<h3>a DB 48h, 65h, 6Ch, 6Ch, 6Fh, 00h</h3>
+<h3>b DB 'Hello', 0</h3>
+<h3>b is an exact copy of the a array, when compiler sees a string inside quotes it
+automatically converts it to set of bytes. This chart shows a part of the
+memory where these arrays are declared:</h3>
+<img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/ARRAY.png">
+<h3>You can access the value of any element in array using square brackets,</h3> 
+<h2 style="color:brown;">For example:</h2>
+<h3>MOV AL, a[3]</h3>
+<h3>You can also use any of the memory index registers <b>BX, SI, DI, BP</b></h3> 
+<h2 style="color:brown;">For example:</h2>
+<h3>MOV SI, 3</h3>
+<h3>MOV AL, a[SI]</h3>
+<h3>If you need to declare a large array you can use <b>DUP</b> operator.</h3>
+<h3>The syntax for <b>DUP</b>:</h3>
+<h3>number DUP ( value(s) )</h3>
+<h3>number - number of duplicate to make (any constant value).</h3>
+<h3>value - expression that DUP will duplicate.</h3>
+<h2 style="color:brown;">For example:</h2>
+<h3>c DB 5 DUP(9)</h3>
+<h3>is an alternative way of declaring:</h3>
+<h3>c DB 9, 9, 9, 9, 9</h3>
+<h3>One more example:</h3>
+<h3>d DB 5 DUP(1, 2)</h3>
+<h3>is an alternative way of declaring:</h3>
+<h3>d DB 1, 2, 1, 2, 1, 2, 1, 2, 1, 2</h3>
+<h3>f course, you can use <b>DW</b> instead of <b>DB</b> if it's required to keep values larger
+then 255, or smaller then -128. <b>DW</b> cannot be used to declare strings. </h3>
+<h1>Getting the Address of a Variable</h1>
+<h3>There is <b>LEA</b> (Load Effective Address) instruction and alternative <b>OFFSET</b>
+operator. Both <b>OFFSET</b> and <b>LEA</b> can be used to get the offset address of the
+variable.</h3>
+<h3><b>LEA</b> is more powerful because it also allows you to get the address of an
+indexed variables. Getting the address of the variable can be very useful in
+some situations, for example when you need to pass parameters to a
+procedure. </h3>
+<h2 style="color:brown;">Reminder:</h3>
+<h3>In order to tell the compiler about data type,</h3>
+<h3>these prefixes should be used:</h3>
+<h3>BYTE PTR - for byte.</h3>
+<h3>WORD PTR - for word (two bytes).</h3>
+<h3>For example:</h3>
+<h3>BYTE PTR [BX] ; byte access.</h3>
+ <h3>or</h3>
+<h3>WORD PTR [BX] ; word access.</h3>
+<h3>emu8086 supports shorter prefixes as well:</h3>
+<h3>b. - for BYTE PTR</h3>
+<h3>w. - for WORD PTR</h3>
+<h3>in certain cases the assembler can calculate the data type automatically.</h3>
+<h3>Here is first example:</h3>
+<p style="border:6px; border-style:solid; border-color:#808080; padding: 1em;">ORG 100h
+<br>MOV AL, VAR1 ; check value of VAR1 by
+<br>moving it to AL.
+<br>LEA BX, VAR1 ; get address of VAR1 in BX.
+<br>MOV BYTE PTR [BX], 44h ; modify the contents of
+<br>VAR1.
+<br>MOV AL, VAR1 ; check value of VAR1 by
+<br>moving it to AL.
+<br>RET
+<br>VAR1 DB 22h
+<br>END</p>
+<h3>Here is another example, that uses OFFSET instead of LEA:</h3>
+<p style="border:6px; border-style:solid; border-color:#808080; padding: 1em;">ORG 100h
+<br>MOV AL, VAR1 ; check value of VAR1 by
+<br>moving it to AL.
+<br>MOV BX, OFFSET VAR1 ; get address of VAR1
+<br>in BX.
+<br>MOV BYTE PTR [BX], 44h ; modify the contents of
+<br>VAR1.
+<br>MOV AL, VAR1 ; check value of VAR1 by
+<br>moving it to AL.
+<br>RET
+<br>VAR1 DB 22h
+<br>END</p>
+<h3>Both examples have the same functionality</h3>
+<h3>These lines:</h3>
+<h3>LEA BX, VAR1</h3>
+<h3>MOV BX, OFFSET VAR1</h3>
+<h3>are even compiled into the same machine code: MOV BX, num</h3>
+<h3>num is a 16 bit value of the variable offset.</h3>
+<h3>Please note that only these registers can be used inside square brackets (as
+memory pointers): BX, SI, DI, BP!</h3>
+
+
+                
+
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material5.html">back<i class="fas fa-arrow-circle-left" style="width:20px; height:25px;"></i> </a>
+            <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material7.html">next<i class="fas fa-arrow-circle-right" style="width:20px; height:25px;"></i> </a>
+            
+            </div>
+
+     
+     <div class="lowpanel">
+      <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/about.html">About</a>
+      <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/contact.html"><i class="fas fa-map-marker-alt"></i>contact us</a>
+         <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/feedback.html"><i class="fas fa-comment-dots"></i>feedback</a>
+       
+         <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/install0.html"><i class="fas fa-hands-helping"></i>Installations help</a>
+        
+     </div>
+     
+     <div class="socialmedia" >
+      <a href="https://www.facebook.com/amit70512/"  ><i class="fab fa-facebook" style="font-size:48px;"> </i></a>
+      <a href="https://www.instagram.com/assemblylearning/"><i class="fab fa-instagram"style="font-size:48px;"></i></a>
+      <a href=""><i class="fab fa-twitter" style="font-size:48px;"></i></a>
+      
+    </div>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+
+
+/*material for writing purpose*/
+h1{
+  padding:50px 10px 50px 20px;
+}
+
+ h1:hover { 
+   
+  transition-delay: 100ms;
+ }   
+   
+
+.material .pre {
+    color: black ;
+    line-height: 1.2 ;
+    border: 1px solid #e8e8e8 ;
+    padding: 6px;
+    background-color: #ffffe5 ;
+    font-weight: 600 ;
+    font-size: 12pt ;
+    font-family: Consolas,"Courier New" ;
+    display: block ;
+    white-space: pre ;
+    overflow: auto ;
+    overflow-x: auto ;
+    overflow-y: auto ;
+    border-left: 4px solid #ff7513;
+
+    word-break: break-all ;
+    word-wrap: break-word ;
+	width:100%;
+	opacity:0.7;
+	float:center;
+	margin-left:30px;
+	
+}
+.program{
+
+color: gray;
+line-height: 1.4;
+white-space: pre;
+text-align:left;
+border-bottom: 2px solid #ff7513;
+font-family: Consolas,"Courier New";
+
+border-left: 4px solid #ff7513;
+word-break:break-all;
+word-wrap: break-word;
+}
+
+
+/* for scroll bar */
+
+::-webkit-scrollbar {
+  scroll-margin-bottom: 10px;
+  scroll-margin-top: 10px;
+  width: 9px;
+
+}
+::-webkit-scrollbar-track{
+  background-color: rgb(255, 152, 16);
+  width: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(232, 255, 216);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  color:yellow;
+}

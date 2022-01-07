@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+         table, th, td {
+            border: 1px solid black;
+         }
+      </style>
+<title>
+   assemblylogin..
+</title>
+<script src="https://kit.fontawesome.com/76b626d43d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="style1.css" type="text/css">
+        <link rel="icon" href="asmlogo.jpg" type="text/icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" /> 
+    </head>
+    <body>
+        <nav>
+            
+                <div class="top">
+                   <a href=""><i class ="fas fa-code"></i></a> 
+                    <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/firstpage.html"><i class="fas fa-home">Home </i>  </a>
+                    <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/ebook1.html"><i class="fas fa-book-open">e-books</i></a>
+                    
+               
+                 <a href ="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/programs.html">8086 examples</a>
+            
+           <!---- <div id="reg"> <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/registration.html">Register</a>
+             </div> -->
+            
+             <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/registration.html">Sign in  <i class="fas fa-sign-in-alt"></i> </a></div>
+              
+            
+        </nav>
+        
+        <div class="dropdown">
+               
+          <button class="dropbutton"><i class="fas fa-microchip"></i>8086  <i class="fas fa-caret-down"></i></button>
+          <div class="content">
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/pin8086.html"> Artitecture and Pin diagram</a>
+          
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material2.html">Registers</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material3.html">Memory accessing</a>
+          
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material5.html">variables</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material6.html">Arrays</a>
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material8.html">Interrupts</a>
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material12.html">Procedures</a>
+
+        </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbutton"><i class="fas fa-microchip"></i>8051  <i class="fas fa-caret-down" ></i></button>
+          <div class="content">
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material1.html">Introduction to 8051</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material2.html">Artitecture</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material3.html">Pin description</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material4.html">8051 Stack</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material5.html">Bit Addressable</a>
+          
+        </div>
+        </div>
+        
+                 
+                    <div class="dropdown">
+                      <button class="dropbutton"><i class="fas fa-project-diagram"></i>Compilers <i class="fas fa-caret-down"></i></button>
+                      <div class="content">
+                      <a href="https://www.onlinegdb.com">Online GDB Compiler </a>
+                      <a href="https://www.tutorialspoint.com/compile_assembly_online.php">MASM compiler</a>
+                      <a href="https://www.tutorialspoint.com/compile_c_online.php"><i class="fas fa-code" style="width:25px;height:25px;"></i>C Compiler</a>
+                      <a href="https://www.tutorialspoint.com/compile_java_online.php"><i class ="fab fa-java" style="width:25px;height:25px;"></i>JAVA Compiler</a>
+                   
+                    </div>
+                    </div>
+               
+            
+       
+            <div class="material">
+			 <h1> General purpose registers</h1>
+<h3>8086 CPU has 8 general purpose registers, each register has its own name:</h3>
+<h3>* AX - the accumulator register (divided into AH / AL).</h3>
+<h3>* BX - the base address register (divided into BH / BL).</h3>
+<h3>* CX - the count register (divided into CH / CL).</h3>
+<h3>* DX - the data register (divided into DH / DL).</h3>
+<h3>* SI - source index register.</h3>
+<h3>* DI - destination index register.</h3>
+<h3>* BP - base pointer.</h3>
+<h3>* SP - stack pointer.</h3>
+<h3>despite the name of a register, it's the programmer who determines the usage
+for each general purpose register. the main purpose of a register is to keep a
+number (variable). the size of the above registers is 16 bit, it's something like:
+0011000000111001b (in binary form), or 12345 in decimal (human) form.</h3>
+<h3>4 general purpose registers (AX, BX, CX, DX) are made of two separate 8 bit
+registers, for example if AX= 0011000000111001b, then AH=00110000b
+and AL=00111001b. therefore, when you modify any of the 8 bit registers 16
+bit register is also updated, and vice-versa. the same is for other 3 registers,
+"H" is for high and "L" is for low part.</h3>
+<h3>because registers are located inside the CPU, they are much faster than
+memory. Accessing a memory location requires the use of a system bus, so it
+takes much longer. Accessing data in a register usually takes no time.</h3>
+<h3>therefore, you should try to keep variables in the registers. register sets are
+very small and most registers have special purposes which limit their use as
+variables, but they are still an excellent place to store temporary data of
+calculations.</h3>
+<h1>Segment registers</h1>
+<h3>* CS - points at the segment containing the current program.</h3>
+<h3>* DS - generally points at segment where variables are defined.</h3>
+<h3>* ES - extra segment register, it's up to a coder to define its usage.</h3>
+<h3>* SS - points at the segment containing the stack.</h3>
+<h3>although it is possible to store any data in the segment registers, this is never
+a good idea. the segment registers have a very special purpose - pointing at
+accessible blocks of memory.</h3>
+<h3>segment registers work together with general purpose register to access any
+memory value. For example if we would like to access memory at the physical
+address 12345h (hexadecimal), we should set the DS = 1230h and SI =
+0045h. This is good, since this way we can access much more memory than
+with a single register that is limited to 16 bit values.</h3>
+<h3>CPU makes a calculation of physical address by multiplying the segment
+register by 10h and adding general purpose register to it (1230h * 10h + 45h= 12345h)</h3>
+<img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/s.png" "height=80" width="80">
+<h3>the address formed with 2 registers is called an effective address.
+by default BX, SI and DI registers work with DS segment register;</h3>
+<h3>BP and SP work with SS segment register.</h3>
+<h3>other general purpose registers cannot form an effective address!
+also, although BX can form an effective address, BH and BL cannot.</h3>
+<h1>special purpose registers</h1>
+<h3>* IP - the instruction pointer.</h3>
+<h3>* flags register - determines the current state of the microprocessor.
+IP register always works together with CS segment register and it points to
+currently executing instruction.</h3>
+<h3>flags register is modified automatically by CPU after mathematical
+operations, this allows to determine the type of the result, and to determine
+conditions to transfer control to other parts of the program.</h3>
+<h3>generally you cannot access these registers directly, the way you can access
+AX and other general registers, but it is possible to change values of system
+registers using some tricks that you will learn a little bit later.</h3>
+
+                
+            
+
+
+            <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material1.html">back<i class="fas fa-arrow-circle-left" style="width:20px; height:25px;"></i> </a>
+            <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material3.html">next<i class="fas fa-arrow-circle-right" style="width:20px; height:25px;"></i> </a>
+            
+            </div>
+
+     
+     <div class="lowpanel">
+      <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/about.html">About</a>
+      <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/contact.html"><i class="fas fa-map-marker-alt"></i>contact us</a>
+         <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/feedback.html"><i class="fas fa-comment-dots"></i>feedback</a>
+       
+         
+         <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/install0.html"><i class="fas fa-hands-helping"></i>Installations help</a>
+        
+     </div>
+     
+     <div class="socialmedia" >
+      <a href="https://www.facebook.com/amit70512/"  ><i class="fab fa-facebook" style="font-size:48px;"> </i></a>
+      <a href="https://www.instagram.com/assemblylearning/"><i class="fab fa-instagram"style="font-size:48px;"></i></a>
+      <a href=""><i class="fab fa-twitter" style="font-size:48px;"></i></a>
+      
+    </div>
+    </body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+   assemblylogin..
+</title>
+<script src="https://kit.fontawesome.com/76b626d43d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="style1.css" type="text/css">
+        <link rel="icon" href="asmlogo.jpg" type="text/icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" /> 
+    </head>
+    <body>
+        <nav>
+            
+                <div class="top">
+                   <a href=""><i class ="fas fa-code"></i></a> 
+                    <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/firstpage.html"><i class="fas fa-home">Home </i>  </a>
+                    <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/ebook1.html"><i class="fas fa-book-open">e-books</i></a>
+                    
+                 
+                 <a href ="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/programs.html">8086 examples</a>
+            
+           <!---- <div id="reg"> <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/registration.html">Register</a>
+             </div> -->
+             
+             <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/registration.html">Sign in  <i class="fas fa-sign-in-alt"></i> </a></div>
+                
+            
+        </nav>
+        
+        <div class="dropdown">
+               
+          <button class="dropbutton"><i class="fas fa-microchip"></i>8086  <i class="fas fa-caret-down"></i></button>
+          <div class="content">
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/pin8086.html"> Artitecture and Pin diagram</a>
+          
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material2.html">Registers</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material3.html">Memory accessing</a>
+          
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material5.html">variables</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material6.html">Arrays</a>
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material8.html">Interrupts</a>
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material12.html">Procedures</a>
+
+        </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbutton"><i class="fas fa-microchip"></i>8051  <i class="fas fa-caret-down" ></i></button>
+          <div class="content">
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material1.html">Introduction to 8051</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material2.html">Artitecture</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material3.html">Pin description</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material4.html">8051 Stack</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material5.html">Bit Addressable</a>
+          
+        </div>
+        </div>
+                   
+                    <div class="dropdown">
+                      <button class="dropbutton"><i class="fas fa-project-diagram"></i>Compilers <i class="fas fa-caret-down"></i></button>
+                      <div class="content">
+                      <a href="https://www.onlinegdb.com">Online GDB Compiler </a>
+                      <a href="https://www.tutorialspoint.com/compile_assembly_online.php">MASM compiler</a>
+                      <a href="https://www.tutorialspoint.com/compile_c_online.php"><i class="fas fa-code" style="width:25px;height:25px;"></i>C Compiler</a>
+                      <a href="https://www.tutorialspoint.com/compile_java_online.php"><i class ="fab fa-java" style="width:25px;height:25px;"></i>JAVA Compiler</a>
+                     
+                    </div>
+                    </div>
+               
+            
+       
+            <div class="material">
+			<h1>ARCHITECTURE OF 8051 MICROCONTROLLER:</h1>
+			<h3>It is 8-bit microcontroller, means MC 8051 can Read, Write and Process 8 bit data. This is
+mostly used microcontroller in the robotics, home appliances like mp3 player, washing
+machines, electronic iron and industries. Mostly used blocks in the architecture of 8051 are as
+follows:</h3>
+<img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/8051%20arch.png">
+<h3><b>1. Oscillator and clock generator:</b></h3>
+<h3>All operations in a microcontroller are synchronized by the help of an oscillator clock.
+The oscillator clock generates the clock pulses by which all internal operations are synchronized.</h3>
+<h3>A resonant network connected through pins XTAL1 and XTAL2 forms up an oscillator. For this
+purpose a quartz crystal and capacitors are employed. The crystal run at specified maximum
+and minimum frequencies typically at 1 MHz to 16 MHz.</h3>
+<h3><b>2. ALU:</b></h3>
+<h3>It is 8 bit unit. It performs arithmetic operation as addition, subtraction, multiplication,
+division, increment and decrement. It performs logical operations like AND, OR and EX-OR. It
+manipulates 8 bit and 16 bit data. It calculates address of jump locations in relative branch
+instruction.</h3> <h3>It performs compare, rotate and compliment operations. It consists of Boolean
+processor which performs bit, set, test, clear and compliment. 8051 micro controller contains 34
+general purpose registers or working registers.2 of them are called math registers A & B and 32
+are bank of registers.</h3>
+<h3><b>a. Accumulator(A-reg):</b></h3>
+<h3>It is 8 bit register. Its address is E0H and it is bit and byte accessible. Result of arithmetic
+& logic operations performed by ALU is accumulated by this register. Therefore it is called
+accumulator register.</h3> <h3>It is used to store 8 bit data and to hold one of operand of ALU units
+during arithmetical and logical operations. Most of the instructions are carried out on
+accumulator data. It is most0 versatile of 2 CPU registers.</h3>
+<h3><b>b. B-register:</b></h3>
+<h3>It is special 8 bit math register. It is bit and byte accessible. It is used in conjunction with
+A register as I/P operand for ALU. It is used as general purpose register to store 8 bit data.</h3>
+<h3><b>c. PSW:</b></h3>
+<h3>It is 8 bit register. Its address is D0H and It is bit and byte accessible. It has 4 conditional
+flags or math flags which sets or resets according to condition of result.</h3> <h3>It has 3 control flags, by
+setting or resetting bit required operation or function can be achieved. The format of flag
+register is as shown below:</h3>
+<h3><b>d. FLAG:</b></h3>
+<h3><b>1. Carry Flag(CY):</b> During addition and subtraction any carry or borrow is generated then
+carry flag is set otherwise carry flag resets. It is used in arithmetic, logical, jump, rotate
+and Boolean operations.</h3>
+<h3><b>2. Auxiliary carry flag(AC):</b> If during addition and subtraction any carry or borrow is
+generated from lower 4 bit to higher 4 bit then AC sets else it resets. It is used in BCD
+arithmetic operations.</h3>
+<h3><b>3. Overflow flag(OV):</b> If in signed arithmetic operations result exceeds more than 7 bit
+than OV flag sets else resets.It is used in signed arithmetic operations only.</h3>
+<h3><b>4. Parity flag(P):</b> If in result, even no. Of ones "1" are present than it is called even parity
+and parity flag sets. In result odd no. Of ones "1"are present than it is called odd parity
+and parity flag resets.</h3>
+<h3><b>ii. CONTROL FLAGS:</b></h3>
+<h3><b>1. FO:</b> It is user defined flag. The user defines the function of this flag. The user can set
+,test n clear this flag through software.</h3>
+<h3><b>2. RS1 and RS0:</b> These flags are used to select bank of register by resetting those flags
+which are as shown in table :</h3>
+<h3><b>3. Program counter (PC):</b> The Program Counter (PC) is a 2-byte address which tells the
+8051 where the next instruction to execute is found in memory. It is used to hold 16 bit
+address of internal RAM, external RAM or external ROM locations.</h3> <h3>When the 8051 is
+initialized PC always starts at 0000h and is incremented each time an instruction is
+executed. It is important to note that PC isnt always incremented by one and never
+decremented.</h3>
+<h3><b>4. Data pointer register (DTPR):</b> It is a 16 bit register used to hold address of external or
+internal RAM where data is stored or result is to be stored. It is used to store 16 bit data.
+It is divided into2- 8bit registers, DPH-data pointer higher order (83H) and DPL-data
+pointer lower order (82H).</h3> <h3>Each register can be used as general purpose register to store
+8 bit data and can also be used as memory location. DPTR does not have single internal
+address. It functions as Base register in base relative addressing mode and in-direct
+jump.</h3>
+<h3><b>5. Stack pointer (SP):</b> It is 8-bit register. It is byte addressable. Its address is 81H. It is
+used to hold the internal RAM memory location addresses which are used as stack
+memory. </h3> <h3>When the data is to be placed on stack by push instruction, the content of
+stack pointer is incremented by 1, and when data is retrieved from stack, content of
+stack of stack pointer is decremented by 1.</h3>
+<h3>iii. Special function Registers(SFR): The 8051 microcontroller has 11 SFR divided in 4 groups:
+A. <b>Timer/Counter register:</b> 8051 microcontroller has 2-16 bit Timer/counter registers called
+Timer-reg-T0 And Timer/counter Reg-T1.Each register is 16 bit register divide into lower and
+higher byte register as shown below:</h3> <h3>These register are used to hold initial no. of count. All of
+the 4 register are byte addressable.</h3>
+<h3><b>1. Timer control register:</b> 8051 microcontroller has two 8-bit timer control register i.e.
+TMOD and TCON register. TMOD Register: it is 8-bit register. Its address is 89H. It is byte
+addressable. It used to select mode and control operation of time by writing control
+word.</h3>
+<h3><b>2. TCON register:</b> It is 8-bit register. Its address is 88H. It is byte addressable. Its MSB 4-
+bit are used to control operation of timer/ counter and LSB 4-bit are used for external
+interrupt control.</h3>
+<h3>B. Serial data register: 8051 micro controller has 2 serial data register viz. SBUF and SCON.</h3>
+<h3><b>1. Serial buffer register (SBUF):</b> it is 8-bit register. It is byte addressable .Its address is
+99H. It is used to hold data which is to be transferred serially.</h3>
+<h3><b>2. Serial control register (SCON):</b> it is 8-bit register. It is bit/byte addressable. Its address
+is 98H. The 8-bit loaded into this register controls the operation of serial communication.
+<h3>C. Interrupt register: 8051 µC has 2 8-bit interrupt register.</h3>
+<h3><b>1. Interrupt enable register (IE):</b> it is 8-bit register. It is bit/byte addressable. Its address
+is A8H.it is used to enable and disable function of interrupt.</h3>
+<h3><b>2. Interrupt priority register (IP):</b> It is 8-bit register. It is bit/byte addressable. Its address
+is B8H. it is used to select low or high level priority of each individual interrupts.
+<h3><b>D. Power control register (PCON):</b> it is 8-bit register. It is byte addressable .Its address is 87H. Its
+bits are used to control mode of power saving circuit, either idle or power down mode and also
+one bit is used to modify baud rate of serial communication.</h3>
+
+
+
+		   <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051materia1.html">back<i class="fas fa-arrow-circle-left" style="width:25px; height:30px;"></i> </a>
+            <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material3.html">next<i class="fas fa-arrow-circle-right	" style="width:25px; height:30px;"></i> </a>
+            </div>
+
+     
+     <div class="lowpanel">
+      <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/about.html">About</a>
+      <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/contact.html"><i class="fas fa-map-marker-alt"></i>contact us</a>
+         <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/feedback.html"><i class="fas fa-comment-dots"></i>feedback</a>
+        
+         
+         <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/install0.html"><i class="fas fa-hands-helping"></i>Installations help</a>
+        
+     </div>
+     
+     <div class="socialmedia" >
+      <a href="https://www.facebook.com/amit70512/"  ><i class="fab fa-facebook" style="font-size:48px;"> </i></a>
+      <a href="https://www.instagram.com/assemblylearning/"> <i class="fab fa-instagram"style="font-size:48px;"></i></a>
+      <a href=""><i class="fab fa-twitter" style="font-size:48px;"></i></a>
+      
+    </div>
+    </body>
+</html>

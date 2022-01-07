@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+     Learn Assembly easily..
+</title>
+<script src="https://kit.fontawesome.com/76b626d43d.js" crossorigin="anonymous"></script>
+<script src="script.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="style1.css" type="text/css">
+        <link rel="icon" href="codingicon.png" type="text/icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" /> 
+    </head>
+    <body>
+        <nav>
+            
+                <div class="top" id="myanimation">
+                   <a href=""><i class ="fas fa-code"></i></a>
+                    <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/firstpage.html"><i class="fas fa-home">Home </i>  </a>
+                    <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/ebook1.html"><i class="fas fa-book-open">e-books</i></a>
+                    
+                 
+                 
+ 
+             <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/registration.html">Sign in  <i class="fas fa-sign-in-alt"></i> </a></div>
+                
+            
+        </nav>
+        
+        <div class="dropdown">
+               
+          <button class="dropbutton"><i class="fas fa-microchip"></i>8086  <i class="fas fa-caret-down"></i></button>
+          <div class="content">
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/pin8086.html"> Artitecture and Pin diagram</a>
+          
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material2.html">Registers</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material3.html">Memory accessing</a>
+          
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material5.html">variables</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material6.html">Arrays</a>
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material8.html">Interrupts</a>
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material12.html">Procedures</a>
+
+        </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbutton"><i class="fas fa-microchip"></i>8051  <i class="fas fa-caret-down" ></i></button>
+          <div class="content">
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material1.html">Introduction to 8051</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material2.html">Artitecture</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material3.html">Pin description</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material4.html">8051 Stack</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material5.html">Bit Addressable</a>
+          
+        </div>
+        </div>
+        
+                    
+                    <div class="dropdown">
+                      <button class="dropbutton"><i class="fas fa-project-diagram"></i>Compilers <i class="fas fa-caret-down"></i></button>
+                      <div class="content">
+                      <a href="https://www.onlinegdb.com">Online GDB Compiler </a>
+                      <a href="https://www.tutorialspoint.com/compile_assembly_online.php">MASM compiler</a>
+                      <a href="https://www.tutorialspoint.com/compile_c_online.php"><i class="fas fa-code" style="width:25px;height:25px;"></i>C Compiler</a>
+                      <a href="https://www.tutorialspoint.com/compile_java_online.php"><i class ="fab fa-java" style="width:25px;height:25px;"></i>JAVA Compiler</a>
+                    
+                    </div>
+                    </div>
+               
+            
+       
+        <div class="material">
+       <h3> Program to read two digits , computes and display their Sum </h3>
+    
+		 <div class="pre">
+ .MODEL SMALL
+ .STACK 100H
+
+ .DATA
+    PROMPT_1  DB  "Enter the First digit : $"
+    PROMPT_2  DB  "Enter the Second digit : $"
+    PROMPT_3  DB  "Sum of First and Second digit : $"
+
+    VALUE_1   DB  ?
+    VALUE_2   DB  ?
+
+ .CODE
+   MAIN PROC
+     MOV AX, @DATA                ; initialize DS
+     MOV DS, AX
+
+     LEA DX, PROMPT_1             ; load and display the PROMPT_1
+     MOV AH, 9
+     INT 21H
+
+     MOV AH, 1                    ; read a character
+     INT 21H
+
+     SUB AL, 30H                  ; save First digit in VALUE_1 in ASCII code
+     MOV VALUE_1,AL
+
+     MOV AH, 2                    ; carriage return
+     MOV DL, 0DH
+     INT 21H
+
+     MOV DL, 0AH                  ; line feed
+     INT 21H
+
+     LEA DX, PROMPT_2             ; load and display the PROMPT_2
+     MOV AH, 9
+     INT 21H
+
+     MOV AH, 1                    ; read a character
+     INT 21H
+
+     SUB AL, 30H                  ; save Second digit in VALUE_2 in ASCII code
+     MOV VALUE_2,AL
+
+     MOV AH, 2                    ; carriage return
+     MOV DL, 0DH
+     INT 21H
+
+     MOV DL, 0AH                  ; line feed
+     INT 21H
+
+     LEA DX, PROMPT_3             ; load and display the PROMPT_3
+     MOV AH, 9
+     INT 21H
+
+     MOV AL, VALUE_1              ; add First and Second digit
+     ADD AL, VALUE_2
+
+     ADD AL, 30H                  ; convert ASCII to DECIMAL code
+
+     MOV AH, 2                    ; display the character
+     MOV DL, AL     
+     INT 21H
+
+     MOV AH, 4CH                  ; return control to DOS
+     INT 21H
+   MAIN ENDP
+ END MAIN
+		</div>
+<a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/programs.html">back<i class="fas fa-arrow-circle-left"></i> </a>
+
+</div>
+
+     
+     <div class="lowpanel">
+         <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/about.html">About</a>
+         <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/contact.html"><i class="fas fa-map-marker-alt"></i>contact us</a>
+         <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/feedback.html"><i class="fas fa-comment-dots"></i>feedback</a>
+         
+         <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/install0.html"><i class="fas fa-hands-helping"></i>Installations help</a>
+        
+     </div>
+     
+     <div class="socialmedia" >
+      <a href="https://www.facebook.com/amit70512/"  ><i class="fab fa-facebook" style="font-size:48px;"> </i></a>
+      <a href=""><i class="fab fa-instagram"style="font-size:48px;"></i></a>
+      <a href=""><i class="fab fa-twitter" style="font-size:48px;"></i></a>
+      
+    </div>
+    </body>
+</html>

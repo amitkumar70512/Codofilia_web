@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>procedures</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+ 
+ 
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="index.html"><span>Moderna</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="" href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a  href="services.html">Services</a></li>
+
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">contact </a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a class='active' href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a href="register.html">Sign in</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+
+    
+          
+
+ 
+ </div>
+ 
+    </main><!-- End #main -->
+    <h1>Procedures</h1>
+			<h3>Procedure is a part of code that can be called from your program in order to
+make some specific task. Procedures make program more structural and easier
+to understand. Generally procedure returns to the same point from where it
+was called.</h3>
+<h3>The syntax for procedure declaration:</h3>
+<h3>name PROC</h3>
+ <h3>; here goes the code</h3>
+ <h3>; of the procedure ...</h3>
+<h3>RET</h3>
+<h3>name ENDP</h3>
+<h3>name - is the procedure name, the same name should be in the top and the
+bottom, this is used to check correct closing of procedures.</h3>
+<h3>Probably, you already know that <b>RET</b> instruction is used to return to operating
+system. The same instruction is used to return from procedure (actually
+operating system sees your program as a special procedure).</h3>
+<h3><b>PROC</b> and <b>ENDP</b> are compiler directives, so they are not assembled into any
+real machine code. Compiler just remembers the address of procedure.
+<b>CALL</b> instruction is used to call a procedure.</h3>
+<h3>Here is an example: </h3>
+<p style="border:6px; border-style:solid; border-color:#808080; padding: 1em;">
+<br>ORG 100h
+<br>CALL m1
+<br>MOV AX, 2
+<br>RET ; return to operating system.
+<br>m1 PROC
+<br>MOV BX, 5
+<br>RET ; return to caller.
+<br>m1 ENDP
+<br>END</p>
+<h3>The above example calls procedure m1, does MOV BX, 5, and returns to the
+next instruction after CALL: MOV AX, 2. </h3>
+<h3>There are several ways to pass parameters to procedure, the easiest way to
+pass parameters is by using registers, here is another example of a procedure
+that receives two parameters in <b>AL</b> and <b>BL</b> registers, multiplies these
+parameters and returns the result in <b>AX</b> register:</h3> 
+<p style="border:6px; border-style:solid; border-color:#808080; padding: 1em;">
+<br>ORG 100h
+<br>MOV AL, 1
+<br>MOV BL, 2
+<br>CALL m2
+<br>CALL m2
+<br>CALL m2
+<br>CALL m2
+<br>RET ; return to operating system.
+<br>m2 PROC
+<br>MUL BL ; AX = AL * BL.
+<br>RET ; return to caller.
+<br>m2 ENDP
+<br>END</p>
+<h3>In the above example value of <b>AL</b> register is update every time the procedure
+is called, <b>BL</b> register stays unchanged, so this algorithm calculates <b>2</b> in power
+of <b>4</b>,</h3>
+<h3>so final result in <b>AX</b> register is <b>16</b> (or 10h). </h3>
+<h3>Here goes another example,
+that uses a procedure to print a Hello World! message:</h3>
+<p style="border:6px; border-style:solid; border-color:#808080; padding: 1em;">
+<br>ORG 100h
+<br>LEA SI, msg ; load address of msg to SI.
+<br>CALL print_me
+<br>RET ; return to operating system.
+<br>;
+<br>==========================================================
+<br>; this procedure prints a string, the string should be null
+<br>; terminated (have zero in the end),
+<br>; the string address should be in SI register:
+<br>print_me PROC
+<br>next_char:
+ <br>CMP b.[SI], 0 ; check for zero to stop
+ <br>JE stop ;
+ <br>MOV AL, [SI] ; next get ASCII char.
+ <br>MOV AH, 0Eh ; teletype function number.
+ <br>INT 10h ; using interrupt to print a char in AL.
+ <br>ADD SI, 1 ; advance index of string array.
+ <br>JMP next_char ; go back, and type another char.
+<br>stop:
+<br>RET ; return to caller.
+<br>print_me ENDP
+<br>;
+<br>==========================================================
+<br>msg DB 'Hello World!', 0 ; null terminated string.
+<br>END</p>
+<h3><b>"b."</b> - prefix before [SI] means that we need to compare bytes, not words.
+When you need to compare words add "w." prefix instead. When one of the
+compared operands is a register it's not required because compiler knows the
+size of each register</h3>
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+          </div>
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About Moderna</h3>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Moderna</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

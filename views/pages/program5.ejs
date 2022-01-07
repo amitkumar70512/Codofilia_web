@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title> Program to read two digits whose sum is less than 0, computes and display their sum  - Codofilia</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/styleprogram.css" rel="stylesheet">
+ 
+</head>
+
+<body>
+
+  <nav id="navbar" class="navbar">
+    <ul>
+      <li><a class="active " href="index">Home</a></li>
+      <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down"></i></a>
+        <ul>
+          <li><a href="ebook">Ebooks</a></li>
+          <li><a href="program">8086 programs</a></li>
+          <li><a href="#">Drop Down 3</a></li>
+          <li><a href="#">Drop Down 4</a></li>
+          <li class="dropdown"><a href="#"><span>Installations</span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+              <li><a href="install1">Ubuntu <i class="fab fa-ubuntu"></i> </a></li>
+              <li><a href="install2">Masm assembler<i class="fas fa-code"></i></a></li>
+              <li><a href="https://www.java.com/download/ie_manual.jsp">Java<i class="fab fa-java"></i></a></li>
+              <li><a href="#"></a></li>
+              
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="about">About</a></li>
+      <li><a href="services">Services</a></li>
+      <li><a href="team">Team</a></li>
+      <li><a href="contact">Contact</a></li>
+      <li><a href="register" id="signin">Sign in</a></li>
+
+      <li class="dropdown" id="profile"><a href="#"><span>Profile</span> <i class="far fa-user"></i></a>
+        <ul>
+          <img src="assets/img/user.jpg"  width="40" height="40" style="margin-left: 40px; margin-top: 20px; align-items: center;"> </br>
+          <li style="align-items: center;"><a href="#"><i class="fas fa-user-edit">  edit profile </i></a></li>
+          <br>
+          <li><a href="#">user details</a></li>
+          <li><a href="#">reset password</a></li> <br>
+          <li onclick="logout()"><a style="font-size: 20px;"><i class="fas fa-power-off"  >   Log out </i></a></li>
+          
+        </ul>
+      </li>
+
+
+
+    </ul>
+    <i class="bi bi-list mobile-nav-toggle"></i>
+  </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Contact Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Program    <i class='fas fa-laptop-code'></i></h2>
+          <ol>
+            <li><a href="index">Home</a></li>
+            <li>Program</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+    <!-- ======= contact renamed as ebook Section ======= -->
+    <!-- ======= Features Section ======= -->
+    <section class="features">
+      <div class="container">
+
+        <div class="section-title">
+          <h2> Program to read two digits whose sum is less than 0, computes and display their sum </h2>
+          <p></p>
+        </div>
+
+        
+
+        
+      </div>
+    </section><!-- End Features Section -->
+  
+    <div class="material">
+       <h3> Program to read two digits whose sum is less than 0, computes and display their sum  </h3>
+    
+		 <div class="pre">
+ .MODEL SMALL
+ .STACK 100H
+
+ .DATA
+    PROMPT_1  DB  \'Enter the First digit : $\'
+    PROMPT_2  DB  \'Enter the Second digit : $\'
+    PROMPT_3  DB  \'Sum of First and Second digit : $\'
+
+ .CODE
+   MAIN PROC
+     MOV AX, @DATA                ; initialize DS
+     MOV DS, AX
+
+     LEA DX, PROMPT_1             ; load and display the PROMPT_1
+     MOV AH, 9
+     INT 21H
+
+     MOV AH, 1                    ; read a character\\digit
+     INT 21H
+
+     MOV BL, AL                   ; save First digit in BL in ASCII code
+     SUB BL, 30H
+
+     MOV AH, 2                    ; carriage return
+     MOV DL, 0DH
+     INT 21H
+
+     MOV DL, 0AH                  ; line feed
+     INT 21H
+
+     LEA DX, PROMPT_2             ; load and display the PROMPT_2
+     MOV AH, 9
+     INT 21H
+
+     MOV AH, 1                    ; read a character
+     INT 21H
+
+     MOV BH, AL                   ; save Second digit in BH in ASCII CODE
+     SUB BH, 30H
+
+     MOV AH, 2                    ; carriage return
+     MOV DL, 0DH
+     INT 21H
+
+     MOV DL, 0AH                  ; line feed
+     INT 21H
+
+     LEA DX, PROMPT_3             ; load and display the PROMPT_3
+     MOV AH, 9
+     INT 21H
+
+     ADD BL, BH                   ; add First and Second digit
+     ADD BL, 30H                  ; convert ASCII to DECIMAL code
+
+     MOV AH, 2                    ; display the character
+     MOV DL, BL     
+     INT 21H
+
+     MOV AH, 4CH                  ; return control to DOS
+     INT 21H
+   MAIN ENDP
+ END MAIN
+
+		</div>
+  </div>
+ 
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<%- include('../partials/footer') %>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/purecounter/purecounter.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+<script src="https://kit.fontawesome.com/76b626d43d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

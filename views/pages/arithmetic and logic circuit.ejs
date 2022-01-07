@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Arithemetic and logic circuit</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+ 
+ 
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="index.html"><span>Moderna</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="" href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a  href="services.html">Services</a></li>
+
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">contact </a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a class='active' href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a href="register.html">Sign in</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+
+    
+          
+
+ 
+ </div>
+ 
+    </main><!-- End #main -->
+    <h1>Arithmetic and logic instructions</h1>
+			<h3>Most Arithmetic and Logic Instructions affect the processor status register (or
+<b>Flags</b>)</h3>
+<img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/alu.png"> 
+<h3>As you may see there are 16 bits in this register, each bit is called a flag and
+can take a value of 1 or 0.</h3>
+<h3>*Carry Flag (CF) - this flag is set to 1 when there is an unsigned
+overflow. For example when you add bytes 255 + 1 (result is not in
+range 0...255). When there is no overflow this flag is set to 0.</h3>
+<h3>*Zero Flag (ZF) - set to 1 when result is zero. For none zero result this
+flag is set to 0.</h3>
+<h3>*Sign Flag (SF) - set to 1 when result is negative. When result is
+positive it is set to 0. Actually this flag take the value of the most
+significant bit.</h3>
+<h3>*Overflow Flag (OF) - set to 1 when there is a signed overflow. For
+example, when you add bytes 100 + 50 (result is not in range -
+128...127).</h3>
+<h3>*Parity Flag (PF) - this flag is set to 1 when there is even number of one
+bits in result, and to 0 when there is odd number of one bits. Even if
+result is a word only 8 low bits are analyzed!</h3>
+<h3>*Auxiliary Flag (AF) - set to 1 when there is an unsigned overflow for
+low nibble (4 bits).</h3>
+<h3>*Interrupt enable Flag (IF) - when this flag is set to 1 CPU reacts to
+interrupts from external devices.</h3>
+<h3>*Direction Flag (DF) - this flag is used by some instructions to process
+data chains, when this flag is set to 0 - the processing is done forward,
+<h3>when this flag is set to 1 the processing is done backward.</h3> 
+<h3>There are 3 groups of instructions.</h3>
+<h3>First group: ADD, SUB,CMP, AND, TEST, OR, XOR</h3>
+<h3>These types of operands are supported:</h3>
+<h3>REG, memory</h3>
+<h3>memory, REG</h3>
+<h3>REG, REG</h3>
+<h3>memory, immediate</h3>
+<h3>REG, immediate</h3>
+<h3>REG: AX, BX, CX, DX, AH, AL, BL, BH, CH, CL, DH, DL, DI, SI, BP, SP.</h3>
+<h3>memory: [BX], [BX+SI+7], variable, etc...</h3>
+<h3>immediate: 5, -24, 3Fh, 10001101b, etc...</h3>
+<h3>After operation between operands, result is always stored in first operand.</h3>
+<h3>CMP and TEST instructions affect flags only and do not store a result (these
+instruction are used to make decisions during program execution).</h3>
+<h3>These instructions affect these flags only:</h3>
+<h3>CF, ZF, SF, OF, PF, AF.</h3>
+<h3>*ADD - add second operand to first.</h3>
+<h3>*SUB - Subtract second operand to first.</h3>
+<h3>*CMP - Subtract second operand from first for flags only.</h3>
+<h3>*AND - Logical AND between all bits of two operands. These rules apply:</h3>
+<h3>1 AND 1 = 1</h3>
+<h3>1 AND 0 = 0</h3>
+<h3>0 AND 1 = 0</h3>
+<h3>0 AND 0 = 0</h3>
+<h3>As you see we get 1 only when both bits are 1.</h3>
+<h3>*TEST - The same as AND but for flags only.</h3>
+<h3>*OR - Logical OR between all bits of two operands. These rules apply:</h3>
+<h3>1 OR 1 = 1</h3>
+<h3>1 OR 0 = 1</h3>
+<h3>0 OR 1 = 1</h3>
+<h3>0 OR 0 = 0</h3>
+<h3>As you see we get 1 every time when at least one of the bits is 1.</h3>
+<h3>*XOR - Logical XOR (exclusive OR) between all bits of two operands.</h3>
+<h3>These rules apply:</h3>
+<h3>1< XOR 1 = 0</h3>
+<h3>1 XOR 0 = 1</h3>
+<h3>0 XOR 1 = 1</h3>
+<h3>0 XOR 0 = 0</h3>
+<h3>As you see we get 1 every time when bits are different from each other.</h3>
+<h3>Second group: MUL, IMUL, DIV, IDIV</h3>
+<h3>These types of operands are supported:</h3>
+<h3>REG</h3>
+<h3>memory</h3>
+<h3>REG: AX, BX, CX, DX, AH, AL, BL, BH, CH, CL, DH, DL, DI, SI, BP, SP.</h3>
+<h3>memory: [BX], [BX+SI+7], variable, etc...</h3>
+<h3>MUL and IMUL instructions affect these flags only:</h3>
+<h3>CF, OF</h3>
+<h3>When result is over operand size these flags are set to 1, when result fits in
+operand size these flags are set to 0.</h3>
+<h3>For DIV and IDIV flags are undefined.</h3>
+<h3>*MUL - Unsigned multiply:</h3>
+<h3>when operand is a byte:</h3>
+<h3>AX = AL * operand.</h3>
+<h3>when operand is a word:</h3>
+<h3>(DX AX) = AX * operand.</h3>
+<h3>*IMUL - Signed multiply:</h3>
+<h3>when operand is a byte:</h3>
+<h3>AX = AL * operand.</h3>
+<h3>when operand is a word:</h3>
+<h3>DX AX) = AX * operand.</h3>
+<h3>*DIV - Unsigned divide: </h3>
+<h3>when operand is a byte:</h3>
+<h3>AL = AX / operand</h3>
+<h3>AH = remainder (modulus). .</h3>
+<h3>when operand is a word:</h3>
+<h3>AX = (DX AX) / operand</h3>
+<h3>DX = remainder (modulus). .</h3>
+<h3>*IDIV - Signed divide:</h3>
+<h3>when operand is a byte:</h3>
+<h3>AL = AX / operand</h3>
+<h3>AH = remainder (modulus). .</h3>
+<h3>when operand is a word:</h3>
+<h3>AX = (DX AX) / operand</h3>
+<h3>DX = remainder (modulus). .</h3>
+<h3>Third group: INC, DEC, NOT, NEG</h3>
+<h3>These types of operands are supported:</h3>
+<h3>REG</h3>
+<h3>memory</h3>
+<h3>REG: AX, BX, CX, DX, AH, AL, BL, BH, CH, CL, DH, DL, DI, SI, BP, SP.</h3>
+<h3>memory: [BX], [BX+SI+7], variable, etc...</h3>
+<h3>INC, DEC instructions affect these flags only:</h3>
+<h3>ZF, SF, OF, PF, AF.</h3>
+<h3>NOT instruction does not affect any flags!</h3>
+<h3>NEG instruction affects these flags only:</h3>
+<h3>CF, ZF, SF, OF, PF, AF.</h3>
+<h3>*NOT - Reverse each bit of operand.</h3>
+<h3>*NEG - Make operand negative (two's complement). Actually it reverses
+each bit of operand and then adds 1 to it. For example 5 will become -5,
+and -2 will become 2.  </h3>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+          </div>
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About Moderna</h3>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Moderna</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

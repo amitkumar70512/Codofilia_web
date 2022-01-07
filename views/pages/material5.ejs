@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+   assemblylogin..
+</title>
+<script src="https://kit.fontawesome.com/76b626d43d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="style1.css" type="text/css">
+        <link rel="icon" href="asmlogo.jpg" type="text/icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" /> 
+    </head>
+    <body>
+        <nav>
+            
+                <div class="top">
+                   <a href=""><i class ="fas fa-code"></i></a> 
+                    <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/firstpage.html"><i class="fas fa-home">Home </i>  </a>
+                    <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/ebook1.html"><i class="fas fa-book-open">e-books</i></a>
+                    
+                
+                 <a href ="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/programs.html">8086 examples</a>
+            
+           <!---- <div id="reg"> <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/registration.html">Register</a>
+             </div> -->
+            
+             <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/registration.html">Sign in  <i class="fas fa-sign-in-alt"></i> </a></div>
+               
+            
+        </nav>
+        
+        <div class="dropdown">
+               
+          <button class="dropbutton"><i class="fas fa-microchip"></i>8086  <i class="fas fa-caret-down"></i></button>
+          <div class="content">
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/pin8086.html"> Artitecture and Pin diagram</a>
+          
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material2.html">Registers</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material3.html">Memory accessing</a>
+          
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material5.html">variables</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material6.html">Arrays</a>
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material8.html">Interrupts</a>
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material12.html">Procedures</a>
+
+        </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbutton"><i class="fas fa-microchip"></i>8051  <i class="fas fa-caret-down" ></i></button>
+          <div class="content">
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material1.html">Introduction to 8051</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material2.html">Artitecture</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material3.html">Pin description</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material4.html">8051 Stack</a>
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/8051material5.html">Bit Addressable</a>
+          
+        </div>
+        </div>
+        
+                    <div class="dropdown">
+                      <button class="dropbutton"><i class="fas fa-project-diagram"></i>Compilers <i class="fas fa-caret-down"></i></button>
+                      <div class="content">
+                      <a href="https://www.onlinegdb.com">Online GDB Compiler </a>
+                      <a href="https://www.tutorialspoint.com/compile_assembly_online.php">MASM compiler</a>
+                      <a href="https://www.tutorialspoint.com/compile_c_online.php"><i class="fas fa-code" style="width:25px;height:25px;"></i>C Compiler</a>
+                      <a href="https://www.tutorialspoint.com/compile_java_online.php"><i class ="fab fa-java" style="width:25px;height:25px;"></i>JAVA Compiler</a>
+                  
+                    </div>
+                    </div>
+               
+            
+       
+            <div class="material">
+                
+           <h1>Variables</h1>
+		   <h3>Variable is a memory location. For a programmer it is much easier to have
+some value be kept in a variable named <b>"var1"</b> then at the address
+<B>5A73:235B,</b> especially when you have 10 or more variables.</h3>
+<h3>Our compiler supports two types of variables: <b>BYTE and WORD.</b> </h3>
+<p style="border:6px; border-style:solid; border-color:#808080; padding: 1em;">Syntax for a variable declaration:
+<br>name <b>DB</b> value
+<br>name <b>DW</b> value
+<br><b>DB</b> - stays for Define Byte.
+<br><b>DW</b> - stays for Define Word.
+<br>name - can be any letter or digit combination, though it should start with a letter. It's possible
+to declare unnamed variables by not specifying the name (this variable will have an address
+but no name).
+<br>value - can be any numeric value in any supported numbering system (hexadecimal, binary, or
+decimal), or "?" symbol for variables that are not initialized. </p>
+<h3>As you probably know from part 2 of this tutorial
+MOV instruction is used to</h3>
+<h3>copy values from source to destination.</h3>
+<h3>Let's see another example with <b>MOV</b> instruction:</h3>
+<p style="border:4px; border-style:solid; border-color:#808082; padding: 1em;"><br>ORG 100h
+<br>MOV AL, var1
+<br>MOV BX, var2
+<br>RET ; stops the program.
+<br>VAR1 DB 7
+<br>var2 DW 1234h</p>
+<h2>Copy the above code to emu8086 source editor, and press F5 key to compile
+and load it in the emulator. You should get something like: </h2>
+<img src="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/languages/variables.png">
+<h3>As you see this looks a lot like our example, except that variables are replaced
+with actual memory locations. When compiler makes machine code, it
+automatically replaces all variable names with their <b>offsets</b>. By default
+segment is loaded in <b>DS</b> register (when <b>COM</b> files is loaded the value of <b>DS</b>
+register is set to the same value as <b>CS</b> register - code segment).</h3>
+<h3>In memory list first row is an <b>offset</b>, second row is a <b>hexadecimal value</b>,
+third row is <b>decimal value</b>, and last row is an <b>ASCII</b> character value.</h3>
+<h3>Compiler is not case sensitive, so <b>"VAR1"</b> and <b>"var1"</b> refer to the same
+variable.</h3>
+<h3>The offset of <b>VAR1</b> is <b>0108h</b>, and full address is <b>0B56:0108</b>.</h3>
+<h3>The offset of <b>var2</b> is <b>0109h</b>, and full address is <b>0B56:0109</b>, this variable is a
+<b>WORD</b> so it occupies <b>2 BYTES</b>. It is assumed that low byte is stored at lower
+address, so <b>34h</b> is located before <b>12h</b>.</h3>
+<h3>You can see that there are some other instructions after the <b>RET</b> instruction,
+this happens because disassembler has no idea about where the data starts, it
+just processes the values in memory and it understands them as valid 8086
+instructions (we will learn them later)</h3>
+<h3>You can even write the same program using <b>DB</b> directive only:</h3>
+<p style="border:8px; border-style:solid; border-color:#808080; padding: 1em;"><br>ORG 100h ; just a directive to make a simple .com file
+<br>(expands into no code).
+<br>DB 0A0h
+<br>DB 08h
+<br>DB 01h
+<br>DB 8Bh
+<br>DB 1Eh
+<br>DB 09h
+<br>DB 01h
+<br>DB 0C3h
+<br>DB 7
+<br>DB 34h
+<br>DB 12h</p>
+<h3>Copy the above code to emu8086 source editor, and press <b>F5</b> key to compile
+and load it in the emulator. You should get the same disassembled code, and
+the same functionality!</h3>
+<h3>As you may guess, the compiler just converts the program source to the set of
+bytes, this set is called <b>machine code</b>, processor understands the <b>machine
+code</b> and executes it.</h3>
+<h3><b>ORG 100h</b> is a compiler directive (it tells compiler how to handle the source
+code). This directive is very important when you work with variables. It tells
+compiler that the executable file will be loaded at the <b>offset</b> of 100h (256
+bytes), so compiler should calculate the correct address for all variables when
+it replaces the variable names with their <b>offsets</b>. Directives are never
+converted to any real <b>machine code</b>.</h3>
+<h3>Why executable file is loaded at <b>offset</b> of <b>100h</b>? Operating system keeps
+some data about the program in the first 256 bytes of the <b>CS</b> (code segment),
+such as command line parameters and etc.</h3>
+<h3>Though this is true for <b>COM</b> files only, <b>EXE</b> files are loaded at offset of <b>0000</b>,
+and generally use special segment for variables. Maybe we'll talk more about
+<b>EXE</b> files later.</h3>
+
+
+          <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material4.html">back<i class="fas fa-arrow-circle-left" style="width:20px; height:25px;"></i> </a>
+            <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/material6.html">next<i class="fas fa-arrow-circle-right" style="width:20px; height:25px;"></i> </a>
+            
+            </div>
+
+     
+     <div class="lowpanel">
+      <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/about.html">About</a>
+      <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/contact.html"><i class="fas fa-map-marker-alt"></i>contact us</a>
+         <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/feedback.html"><i class="fas fa-comment-dots"></i>feedback</a>
+         
+        
+         
+         <a href="file:///C:/Users/cw/Desktop/htmlbasic/assemblylogin/install0.html"><i class="fas fa-hands-helping"></i>Installations help</a>
+        
+     </div>
+     
+     <div class="socialmedia" >
+      <a href="https://www.facebook.com/amit70512/"  ><i class="fab fa-facebook" style="font-size:48px;"> </i></a>
+      <a href="https://www.instagram.com/assemblylearning/"><i class="fab fa-instagram"style="font-size:48px;"></i></a>
+      <a href=""><i class="fab fa-twitter" style="font-size:48px;"></i></a>
+      
+    </div>
+    </body>
+</html>

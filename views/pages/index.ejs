@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Codofilia </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="index"><span>Codofilia</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="active " href="index">Home</a></li>
+          <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="ebook">Ebooks<i class="fas fa-book"></i></a></li>
+              <li><a href="program">8086 programs <i class="fa fa-code"></i></a></li>
+              <li><a href="compiler">Online compiler <i class="fas fa-code-branch"></i></a></li>
+              <li><a href="firstpage ">8051<i class="fas fa-chip"></i></a></li>
+              <li><a href="firstpage">8086<i class="fas fa-microchip"></i></a></li>
+              <li class="dropdown"><a href="#"><span>Installations</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="install1">Ubuntu <i class="fab fa-ubuntu"></i></a></li>
+                  <li><a href="install2">Masm assembler<i class="fas fa-code"></i></a></li>
+                  <li><a href="https://www.java.com/download/ie_manual.jsp">Java<i class="fab fa-java"></i></a></li>
+                  <li><a href="#"></a></li>
+                  
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="about">About</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="team">Team</a></li>
+          <li><a href="contact">Contact</a></li>
+          <li><a href="register" id="signin">Sign in</a></li>
+
+          <li class="dropdown" id="profile"><a href="#"><span>Profile</span> <i class="far fa-user"></i></a>
+            <ul>
+              <img src="assets/img/user.jpg"  width="40" height="40" style="margin-left: 40px; margin-top: 20px; align-items: center;"> </br>
+              <li style="align-items: center;"><a href="#"><i class="fas fa-user-edit">  edit profile </i></a></li>
+              <br>
+              <li><a href="#">user details</a></li>
+              <li><a href="#">reset password</a></li> <br>
+              <li onclick="logout()"><a style="font-size: 20px;"><i class="fas fa-power-off"  >   Log out </i></a></li>
+              
+            </ul>
+          </li>
+
+
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header>
+
+
+
+
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Codofilia</span></h2>
+          <p class="animate__animated animate__fadeInUp"></p>
+          <a href="login" class="btn-get-started animate__animated animate__fadeInUp">Get started</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Assembly learning with us</h2>
+          <p class="animate__animated animate__fadeInUp">Learn Assembly helps you build on your employability , optimism .</p>
+          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Get started</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Code and Compile </h2>
+          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Get started</a>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Services Section ======= -->
+    <section class="services">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="icon-box icon-box-pink">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">Programs
+              </a></h4>
+              <p class="description">program codes of Microprocessor <i class="fas fa-chip"></i> and Microcontrollers are here..</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box icon-box-cyan">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="contact">Feedback</a></h4>
+              <p class="description">The goal is to gain better understanding of the overall user experiences ,so we can identify areas for improvement </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-green">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="compiler">Compile</a></h4>
+              <p class="description">The user friendly  online compiler that allows you to Write C code and run it online. The C text editor also supports taking input from the user and ...</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-blue">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="ebook">E-books</a></h4>
+              <p class="description">an electronic version of printed book that allows you to learn and enhance basic concepts ...</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 video-box">
+            <img src="assets/img/why-us.jpg" class="img-fluid" alt="">
+            <a href="https://www.youtube.com/channel/UCYa1WtI-vb_bx-anHdmpNfA" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-book"></i></div>
+              <h4 class="title"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjh95Xq187xAhURheYKHfOKCu4QFnoECAoQAw&url=https%3A%2F%2Fnptel.ac.in%2F&usg=AOvVaw0vSuujSoj8BxYECFWbfhwm">Nptel courses</a></h4>
+              <p class="description">The National Programme on Technology Enhanced Learning (NPTEL) was initiated by seven Indian Institutes of Technology (Bombay, Delhi, Kanpur, Kharagpur, Madras, Guwahati and Roorkee) along with the Indian Institute of Science, Bangalore in 2003. Five core disciplines were identified, namely, civil engineering, computer science and engineering, electrical engineering, electronics and communication engineering and mechanical engineering and 235 courses in web/video format were developed in this phase.</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-university"></i></div>
+              <h4 class="title"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjMicLc2M7xAhVy7nMBHelpClgQFnoECAQQAw&url=https%3A%2F%2Fwww.bmsce.ac.in%2F&usg=AOvVaw20m8BoWEkD4C0HotKTVHdz">Bmsce portal</a></h4>
+              <p class="description">BMSCE is the first private sector initiative in engineering education in India. BMSCE has completed 70+ years of dedicated service in the field of Engineering​ ...</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section class="features">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Features</h2>
+          <p>Assembly language is very important for understanding the computer architecture and programs for the programmers. The programmers mainly used many other programming languages for application development and software, but assembly language is also important.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5">
+            <img src="assets/img/features-1.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4">
+            
+            <p class="fst-italic">
+               Machine language is difficult to understand and read as it is just a series of numbers. Assembly language helps in providing full control of what tasks a computer is performing.
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i> It allows complex jobs to run in a simpler way.</li>
+              <li><i class="bi bi-check"></i> It is memory efficient, as it requires less memory.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- <div class="row" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2">
+            <img src="assets/img/features-2.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <h3>Corporis temporibus maiores provident</h3>
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum
+            </p>
+          </div>
+        </div> -->
+
+        
+      </div>
+    </section><!-- End Features Section -->
+
+  </main><!-- End #main -->
+
+   <!-- ======= Footer ======= -->
+
+   <%- include('../partials/footer') %>
+   <!--  end of  footer-->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/script_sign.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+</body>
+
+</html>
