@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "dev": "nodemon app.js"
   },
   "author": "amit015",
@@ -16,6 +16,7 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-validator": "^6.12.0",
+    "heroku": "^7.59.2",
     "mysql": "^2.18.1",
     "password-validator": "^5.1.1",
     "popups": "^1.1.3",
