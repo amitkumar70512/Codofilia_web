@@ -619,10 +619,29 @@ async function getFirestore(){
     }
 
 
+
+
+ 
+
     app.get('/index2',async (request,response) =>{
         console.log("inside async firestore")
         var db_result = await getFirestore();
         console.log(db_result)
         response.render('pages/index',{db_result});
         });
-        
+
+
+        async function insertFormData(request){
+            const writeResult = await firebase.firestore().collection('sample').add({
+            firstname: request.body.firstname,
+            lastname: request.body.lastname
+            })
+            .then(function() {console.log("Document successfully written!");})
+            .catch(function(error) {console.error("Error writing document: ", error);});
+            }
+
+
+        app.post('/insert_data',async (request,response) =>{
+            var insert = await insertFormData(request);
+            response.sendStatus(200);
+            });
