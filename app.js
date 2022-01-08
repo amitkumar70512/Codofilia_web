@@ -1,7 +1,11 @@
-  
+var firebase = require("firebase-admin");
+const functions = require('firebase-functions');
+var serviceAccount = require("./serviceAccountKey.json");
+ 
+ ////
 const mysql = require('mysql');  
 const express = require('express');  
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 const path=require('path');
 const bodyParser= require('body-parser');
 const {check, validationResult}=require('express-validator');
@@ -11,6 +15,7 @@ const ejs = require('ejs');
 
 // for encryption
 const bcrypt = require('bcrypt');
+const { firestore } = require("firebase-admin");
 const saltRounds = 10;
 
 var app = express();  
@@ -590,3 +595,34 @@ app.post('/subscribe',[
 
 
 
+
+
+
+
+///////
+
+
+firebase.initializeApp({
+  credential: firebase.credential.cert(serviceAccount)
+  
+});
+
+var db = firebase.firestore();
+
+async function getFirestore(){
+    const firestore_con  = await firebase.firestore();
+    const writeResult = firestore_con.collection('sample').doc('sample_doc').get().then(doc => {
+    if (!doc.exists) { console.log('No such document!'); }
+    else {return doc.data();}})
+    .catch(err => { console.log('Error getting document', err);});
+    return writeResult
+    }
+
+
+    app.get('/index2',async (request,response) =>{
+        console.log("inside async firestore")
+        var db_result = await getFirestore();
+        console.log(db_result)
+        response.render('pages/index',{db_result});
+        });
+        
