@@ -196,11 +196,9 @@ app.post('/logging', function(req,res,next){
                     }
                      const token = generateAccessToken(user);
                      console.log("token is created")
-                    
-                     res.cookie("jwt_authentication",token,{
-                        maxAge: 2 * 60 * 60 * 1000,
-                         httpOnly:true
-                     }); 
+                   
+                     
+                     res.cookie("jwt_authentication",token,{ maxAge: 900000, httpOnly: true })
                     
                     res.render('pages/login',{
                         alert:`${name} logged in succesfully!!`
