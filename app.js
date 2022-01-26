@@ -198,7 +198,7 @@ app.post('/logging', function(req,res,next){
                      console.log("token is created")
                     
                      res.cookie("jwt_authentication",token,{
-                         expires: new Date(Date.now() + 10000),
+                         expires: new Date(Date.now() + 1000000),
                          httpOnly:true
                      }); 
                     
