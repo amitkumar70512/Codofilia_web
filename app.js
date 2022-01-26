@@ -16,6 +16,8 @@ const ejs = require('ejs');
 // for encryption
 const bcrypt = require('bcrypt');
 const { firestore } = require("firebase-admin");
+const jwt= require("jsonwebtoken");
+const { AuthRegistrationsCredentialListMappingContext } = require("twilio/lib/rest/api/v2010/account/sip/domain/authTypes/authRegistrationsMapping/authRegistrationsCredentialListMapping");
 const saltRounds = 10;
 
 var app = express();  
@@ -70,7 +72,8 @@ app.post('/subscribe',[
 });
 
 
-app.post('/submit',[
+
+app.post('/register',[
     check('name', 'Please enter valid username without space..')
         .exists()
         .isLength({ min: 3 })
@@ -100,6 +103,15 @@ pass1=req.body.passkey;
 pass2=req.body.confirmpasskey;
 console.log(name+email+""+pass1+pass2)
 const encryptkey = await bcrypt.hash(req.body.passkey, saltRounds)
+
+const user=new AuthRegistrationsCredentialListMappingContext({
+    name:req.body.name,
+    email:req.body.email,
+    password:pass1,
+    confirmpassword:pass2
+})
+const token= await  user.generateAuthToken()
+
 const writeResult = await admin.firestore().collection('user').doc(email).set({
     name: name,
     password: encryptkey
