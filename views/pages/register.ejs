@@ -128,21 +128,14 @@
           <div class="col-lg-6">
 
            <% if(typeof alert != 'undefined') { %>
-              <% alert.forEach(function(error) { %>
+              
                   <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                      <%= error.msg %>
+                      <%= alert %>
                       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-              <% }) %>
+              
           <% } %>
-          <% if(typeof success!= 'undefined') { %>
-            <% success.forEach(function(error) { %>
-                <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                   <%=  error.msg %>
-                    
-                  </div>
-            <% }) %>
-        <% } %>
+         
             <h4 class="card-title mt-3 text-center">Create Account</h4>
             <form action="/submit" method="post" role="form">
                 <div class="form-group input-group">
@@ -157,18 +150,7 @@
                      </div>
                     <input name="email" class="form-control" placeholder="Email address" type="email">
                 </div> <!-- form-group// -->
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-                    </div>
-                    <!-- <select class="custom-select" style="max-width: 120px;">
-                        <option selected="">+91</option>
-                        <option value="1">+92</option>
-                        <option value="2">+93</option>
-                        <option value="3">+94</option>
-                    </select> -->
-                    <input name="contact" class="form-control" placeholder="Phone number" type="text">
-                </div> <!-- form-group// -->
+                
                
                     
                  <!-- form-group end.// -->
