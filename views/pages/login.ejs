@@ -28,7 +28,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-  <script src="script2regvalidate.js"></script>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -117,28 +116,23 @@
             <h4 class="card-title mt-3 text-center">Log in to your Account <i class='fas fa-user'></i></h4>
 
             <% if(typeof alert != 'undefined') { %>
-              <% alert.forEach(function(error) { %>
                   <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                      <%= error.msg %>
+                      <%= alert %>
                       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                       
-                      </button>
                     </div>
-              <% }) %>
+
           <% } %>
             
           
-            <form action="/login" method="post">
+            <form action="/logging" method="post">
            
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                      </div>
-                    <input name="email" class="form-control" placeholder="Username" type="email">
+                    <input name="email" class="form-control" placeholder="your email" type="email">
                 </div> <!-- form-group// -->
-                
-               
-                    
+          
                  <!-- form-group end.// -->
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
@@ -147,7 +141,6 @@
                     <input class="form-control" placeholder="password" type="password" name="passkey">
                 </div> <!-- form-group// -->
                                
-                
                 <div class="form-group">
                     <button  type="submit" class="btn btn-primary btn-block"> Sign in  </button>
                 </div> <!-- form-group// -->      
