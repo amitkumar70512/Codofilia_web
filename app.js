@@ -63,6 +63,7 @@ function generateAccessToken(username) {
     const authHeader = req.headers.cookie;
     const token = authHeader && authHeader.split(' ')[1]
     const finaltoken=token && token.split('=')[1]
+    console.log(finaltoken)
     if (token == null) {
         res.render('pages/login',{
             alert:'Unauthorized access, Log in First'
