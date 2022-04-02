@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: #68A4C4;
+  background: #8b68c4;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 .back-to-top:hover {
-  background: #85b6cf;
+  background: #ab85cfcc;
   color: #fff;
 }
 
@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background: #1e4356;
+  background: #60277a;
 }
 
 #header.header-transparent {
@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 #header.header-scrolled {
-  background: rgba(30, 67, 86, 0.8);
+  background: rgba(59, 30, 86, 0.8);
   height: 60px;
 }
 
@@ -315,7 +315,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   left: 50%;
   top: 0;
   width: 130%;
-  height: 95%;
+  height: 90%;
   background: linear-gradient(to right, rgba(58, 50, 59, 0.8), rgba(58, 50, 59, 0.6)), url("../img/hero-bg.jpg") center top no-repeat;
   z-index: 0;
   border-radius: 0 0 50% 50%;
@@ -348,55 +348,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   right: 0;
 }
 
-#hero h2 {
-  color: #fff;
-  margin-bottom: 30px;
-  font-size: 48px;
-  font-weight: 700;
-}
 
-#hero p {
-  width: 80%;
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-  margin: 0 auto 30px auto;
-  color: #fff;
-}
-
-#hero .carousel-control-prev, #hero .carousel-control-next {
-  width: 10%;
-}
-
-#hero .carousel-control-next-icon, #hero .carousel-control-prev-icon {
-  background: none;
-  font-size: 48px;
-  line-height: 1;
-  width: auto;
-  height: auto;
-}
-
-#hero .btn-get-started {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 32px;
-  border-radius: 50px;
-  transition: 0.5s;
-  line-height: 1;
-  margin: 10px;
-  color: #fff;
-  -webkit-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-  border: 2px solid #68A4C4;
-}
-
-#hero .btn-get-started:hover {
-  background: #68A4C4;
-  color: #fff;
-  text-decoration: none;
-}
 
 @media (min-width: 1024px) {
   #hero p {
@@ -1775,7 +1727,7 @@ body {
   top: 0;
   bottom: 0;
   width: 3px;
-  background-color: #1e4356;
+  background-color: #53237a;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -2165,7 +2117,7 @@ body {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #0b212d;
+  background: #40116d;
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
@@ -2173,7 +2125,7 @@ body {
 
 #footer .footer-newsletter {
   padding: 50px 0;
-  background: #0d2735;
+  background: #5f06a8;
 }
 
 #footer .footer-newsletter h4 {
@@ -2216,13 +2168,13 @@ body {
 }
 
 #footer .footer-newsletter form button[type="submit"]:hover {
-  background: #468db3;
+  background: #b36946;
 }
 
 #footer .footer-top {
-  background: #0d2735;
-  border-top: 1px solid #17455e;
-  border-bottom: 1px solid #123649;
+  background: #2b0346;
+  border-top: 1px solid #42175e;
+  border-bottom: 1px solid #3e1249;
   padding: 60px 0 30px 0;
 }
 
